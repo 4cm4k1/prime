@@ -21,13 +21,28 @@ app.get('/', function(request, response){
 ###Get connected to your database.
 Put the following into your server side js file (I typically call mine server.js, and a lot of people use app.js)
 
-``` JavaScript
-var MongoClient = require('mongodb').MongoClient;
+TO install a modules
+`npm install mongoose --save`
 
-MongoClient.connect("mongodb://localhost:27017/clientDb", function(err, db) {
-  if(!err) {
-    console.log("We are connected");
+To remove a module
+`npm remove mongodb --save`
+
+``` JavaScript
+// Mongo setup
+var mongoose = require('mongoose');
+
+var mongoURI = "mongodb://localhost:27017/todoAPI";
+var MongoDB = mongoose.connect(mongoURI).connection;
+MongoDB.on('error', function (err) {
+  if (err) {
+    console.log('mongodb connection error', err);
+  } else {
+    console.log('mongodb connection successful');
   }
+});
+
+MongoDB.once('open', function () {
+  console.log('mongodb connection open');
 });
 ```
 
@@ -35,6 +50,8 @@ What does it do? The first line requires MongoDB and gives us access to the clie
 
 ###Create a "Assignment" Model
 In your Node application, create a folder called `models`. Within that folder create a model named `assignments` and give it some properties that an assignment would have. The minimum requirements are a student name, score, date_completed. The more, the better!
+
+[MongoDB Types](http://docs.mongodb.org/manual/reference/bson-types/)
 
 ###Create a CRUD operations for the model.
 
