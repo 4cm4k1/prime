@@ -40,7 +40,7 @@ MongoDB.once('open', function () {
 });
 ```
 
-What does it do? The first line requires MongoDB and gives us access to the client. The second function connects to the database and a document store named `clientDb`. 
+What does it do? The first line requires MongoDB and gives us access to the client. The second function connects to the database and a document store named `assignments`. 
 
 **NOTE**
 
