@@ -14,7 +14,7 @@ Create a basic NodeJS application with an express server. Add an index file as w
 
 ``` JavaScript
 app.get('/', function(res, req, next){
-    response.sendfile(res.sendFile(path.resolve(__dirname, '../views/index.html'));
+    res.sendFile(path.resolve(__dirname, '../views/index.html'));
 });
 ```
 
