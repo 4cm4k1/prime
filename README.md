@@ -13,7 +13,7 @@ Use it. Love it.
 Create a basic NodeJS application with an express server. Add an index file as well. Make sure you add an app.get to send your index file!
 
 ``` JavaScript
-app.get('/', function(request, response){
+app.get('/', function(res, req, next){
     response.sendfile(res.sendFile(path.resolve(__dirname, '../views/index.html'));
 });
 ```
