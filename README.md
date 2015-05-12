@@ -14,18 +14,12 @@ Create a basic NodeJS application with an express server. Add an index file as w
 
 ``` JavaScript
 app.get('/', function(request, response){
-    response.sendfile('index.html');
+    response.sendfile(res.sendFile(path.resolve(__dirname, '../views/index.html'));
 });
 ```
 
 ###Get connected to your database.
 Put the following into your server side js file (I typically call mine server.js, and a lot of people use app.js)
-
-TO install a modules
-`npm install mongoose --save`
-
-To remove a module
-`npm remove mongodb --save`
 
 ``` JavaScript
 // Mongo setup
@@ -47,6 +41,14 @@ MongoDB.once('open', function () {
 ```
 
 What does it do? The first line requires MongoDB and gives us access to the client. The second function connects to the database and a document store named `clientDb`. 
+
+**NOTE**
+
+How to install a module
+`npm install mongoose --save`
+
+How to remove a module
+`npm remove mongodb --save`
 
 ###Create a "Assignment" Model
 In your Node application, create a folder called `models`. Within that folder create a model named `assignments` and give it some properties that an assignment would have. The minimum requirements are a student name, score, date_completed. The more, the better!
