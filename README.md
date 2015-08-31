@@ -10,7 +10,7 @@ Run the command `mongod` from the terminal. If it fails, follow the [installatio
 Use it. Love it.
 
 ###Create a new NodeJS application. 
-Create a basic NodeJS application with an express server. Update the index file so that `res.render` sends an object with an array of placeholder assignments. Use this to get your index page to load the way you want.
+Create a basic NodeJS application with an express server. Update the index file so that `res.render` sends an object with an array of placeholder assignment objects. Use this to get your index page to load the way you want.
 
 ###Get connected to your database.
 Put the following into your server side app.js file.
@@ -30,7 +30,7 @@ MongoDB.once('open', function () {
 });
 ```
 
-What does it do? The first line requires MongoDB and lets us use the Mongoose functions. The next is just a URL to the mongo database, which you set up earlier. The third gives connects to the database and a document store named `assignments` and returns an object that gives us access to the client. The "on error" function allows us to see a console log when it can't connect. The final "once open" function lets us know when it's connected. 
+What does it do? The first line requires MongoDB and lets us use the Mongoose functions. The next is just a URL to the mongo database, which you set up earlier. The third connects to the database and a document store named `assignments` (this name is chosen by us) and returns an object that gives us access to the client. The "on error" function allows us to see a console log when it can't connect. The final "once open" function lets us know when it's connected. 
 
 **REVIEW**
 
