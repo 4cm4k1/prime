@@ -61,11 +61,11 @@ To remove, delete or archive a resource, use DELETE.
 
 ###Tying it all together
 
+Create an Ajax form that will create the entries using the /assignments route. When you reload the page, it should have any new entries added. 
+
 In your index file, display a list of all assignments that are in the database when the page loads. You can handle this using the template rendering engine (no need to make an Ajax call).
 
 Once you have that working add a button next to each assignment record. When the button is clicked, it will delete the record from the database using Ajax.
-
-Create an Ajax form that will create the entries using the /assignments route. When you reload the page, it should have any new entries added. 
 
 ##HARD MODE
 
