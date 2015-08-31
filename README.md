@@ -1,5 +1,5 @@
 # prime_peer_db_01
-In this exercise you'll be creating a MongoDB application to store customer information. The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them.
+In this exercise you'll be creating a MongoDB application to store student assignment information. The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them.
 
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
