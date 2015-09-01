@@ -48,7 +48,9 @@ Also, look at all of the [MongoDB Types](http://docs.mongodb.org/manual/referenc
 
 ###Create a CRUD operations for the model.
 
-Use a combination of REST methods and Mongo methods to make a Create, Update, Read and Delete route for /assignments. 
+Use a combination of REST methods and Mongo methods to make a Create, Read, Update, and Delete route for /assignments. 
+
+You will need to pass in the assignment IDs to Read, Update and Delete. Update will also need to pass the "updated" model (use "req.body") to udpate.
 
 *Remember, in REST*:
 
