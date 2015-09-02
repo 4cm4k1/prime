@@ -1,7 +1,9 @@
 # prime_peer_db_01
 In this exercise you'll be creating a MongoDB application to store student assignment information, including the assignment name, the student's identity, their score on the assignment, and the date it was turned in. Only the identity and date completed are required.
 
-The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them.
+The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them. 
+
+You may use Jade, HBS (handlebars on the server-side) or Handlebars.js (handlebars on the client-side) if you like. It is not required.
 
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
@@ -64,7 +66,7 @@ To remove, delete or archive a resource, use DELETE.
 
 ###Display Assignments
 
-On the index page, display the list of all assignments. The customer says that they may have more than one person working on the assignments at a time, so this list should update every 10 seconds.
+On the index page, display the list of all assignments. The customer says that they may have more than one person working on the assignments at a time, so this list should update every 5 seconds. Only write this data to the DOM if it has changed since the last time it was checked. (hint: save it in a variable)
 
 ###Additional GET functionality
 
