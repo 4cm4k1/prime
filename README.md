@@ -1,5 +1,7 @@
 # prime_peer_db_01
-In this exercise you'll be creating a MongoDB application to store student assignment information. The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them.
+In this exercise you'll be creating a MongoDB application to store student assignment information, including the assignment name, the student's identity, their score on the assignment, and the date it was turned in. Only the identity and date completed are required.
+
+The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them.
 
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
@@ -22,11 +24,11 @@ var mongoURI = "mongodb://localhost:27017/assignments";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
-    console.log('mongodb connection error', err);
+    console.log('mongodb connection error:', err);
 });
 
 MongoDB.once('open', function () {
-  console.log('mongodb connection open');
+  console.log('mongodb connection open!');
 });
 ```
 
@@ -41,29 +43,36 @@ How to remove the module
 `npm remove mongodb --save`
 
 ###Create an "Assignment" Model
-In your Node application, create a folder called `models`. Within that folder create a mongoose model named `assignments` and give it some properties that an assignment would have. The minimum requirements are a student_name, score, date_completed. The more, the better!
+In your Node application, create a folder called `models`. Within that folder create a mongoose model named `assignments` and give it some properties that an assignment would have. 
 
-See some [Mongoose Schema documentation](http://mongoosejs.com/docs/guide.html).
-Also, look at all of the [MongoDB Types](http://docs.mongodb.org/manual/reference/bson-types/)
+The minimum requirements are: assignment_number, student_name, score and date_completed. 
+
+When creating your model it may be useful to see some [Mongoose Schema documentation](http://mongoosejs.com/docs/guide.html), and also to look at all of the [MongoDB Types](http://docs.mongodb.org/manual/reference/bson-types/)
 
 ###Create GET and POST routes for /assignments
 
-Use a combination of REST methods and Mongo methods to make a GET and POST route.
+Next you'll need to be able to access the assignments via an API. Use a combination of REST methods and Mongo methods to make a route for reading all assignments, and for creating new assignments.
 
-Allow the GET method to accept either an ID to pass to the mongoose function `Assignments.find`, or find all if none is supplied. You'll only need the `req.body` for and `model.save()`. 
+*Hint:* Use req.body to access the x-www-url-formencoded data that is passed into the API. Also, be sure to test them with Postman.
 
-*Remember, in REST*:
+*Remember, in REST:*
 
 To retrieve a resource, use GET. 
 To create a resource on the server, use POST.
 To change the state of a resource, use PUT.
 To remove, delete or archive a resource, use DELETE.
 
-**Use postman to test each method.**
+###Display Assignments
+
+On the index page, display the list of all assignments. The customer says that they may have more than one person working on the assignments at a time, so this list should update every 10 seconds.
+
+###Additional GET functionality
+
+In addition, the route that reads all assignments should also accept an ID. When it receives the ID, it should be given to the mongoose function `Assignments.find` and return only that one. Otherwise if no ID is supplied, it should return all assignments. 
 
 ###Tying it all together
 
-Create an Ajax form that will create the entries using the /assignments POST route. (When you reload the page, it should have any new entries added.)
+Create an Ajax <form> that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
 
 In your index file, display a list of all assignments that are in the database when the page loads. You can handle this using the template rendering engine (no need to make an Ajax call).
 
