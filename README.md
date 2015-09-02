@@ -40,7 +40,7 @@ How to install the module
 How to remove the module
 `npm remove mongodb --save`
 
-###Create a "Assignment" Model
+###Create an "Assignment" Model
 In your Node application, create a folder called `models`. Within that folder create a mongoose model named `assignments` and give it some properties that an assignment would have. The minimum requirements are a student_name, score, date_completed. The more, the better!
 
 See some [Mongoose Schema documentation](http://mongoosejs.com/docs/guide.html).
