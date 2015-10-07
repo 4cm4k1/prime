@@ -74,7 +74,7 @@ In addition, the route that reads all assignments should also accept an ID. When
 
 ###Tying it all together
 
-Create an Ajax form that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
+Create an Ajax `<form>` that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
 
 In your index file, display a list of all assignments that are in the database when the page loads. You can handle this using the template rendering engine (no need to make an Ajax call).
 
