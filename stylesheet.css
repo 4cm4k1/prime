@@ -18,6 +18,21 @@
 	color: #fff;
 }
 
+div .contact-info {
+	font-family: "industry", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	text-shadow: 1px 1px #0E5C0A;
+}
+
+div .profile {
+	font-family: "industry", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 24px;
+	text-shadow: 1px 1px #0E5C0A;
+}
+
 .infobox {
 	width: 400px;
 }
