@@ -1,36 +1,25 @@
-.nav li {
-	display: inline;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
-}
-
-.nav a {
-	padding: 20px;
-}
-
 .jumbotron {
 	background-image: url('photo.jpg');
 	background-size: cover;
-	background: no-repeat bottom right fixed;
+	background-position: 0% 50%;
 	height: 500px;
 }
+
 .jumbotron h1 {
 	font-family: "verveine", sans-serif;
-	font-size: 48px;
+	font-size: 60px;
 	color: #fff;
 }
 
 .jumbotron p {
 	font-family: ;
-	font-size: 24px;
 	color: #fff;
 }
 
-.job-title-date h4 {
-	display: inline;
+.infobox {
+	width: 400px;
 }
 
-.job-title-date p {
-	display: inline;
+.professional-experience h3, .professional-experience h4 {
+	font-family: "verveine", sans-serif;
 }
