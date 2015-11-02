@@ -6,7 +6,8 @@
 }
 
 .jumbotron h1 {
-	font-family: "factoria-n7", sans-serif;
+	font-family: "factoria", sans-serif;
+	font-weight: 700;
 	font-size: 60px;
 	color: #fff;
 	text-shadow: 2px 2px #0E5C0A;
@@ -22,11 +23,13 @@
 }
 
 .professional-experience h3 {
-	font-family: "factoria-n6", sans-serif;
+	font-family: "factoria", sans-serif;
+	font-weight: 600;
 	font-size: 36px;
 }
 
 .professional-experience h4 {
-	font-family: "factoria-n6", sans-serif;
+	font-family: "factoria", sans-serif;
+	font-weight: 600;
 	font-size:  24px;
 }
