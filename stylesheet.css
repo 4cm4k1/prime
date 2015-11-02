@@ -37,6 +37,15 @@ div .profile {
 	width: 400px;
 }
 
+.infobox a, .infobox a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.infobox a:hover, .infobox a:active {
+	text-decoration: underline;
+}
+
 .professional-experience h3 {
 	font-family: "factoria", sans-serif;
 	font-weight: 600;
