@@ -20,6 +20,12 @@
 	width: 400px;
 }
 
-.professional-experience h3, .professional-experience h4 {
+.professional-experience h3 {
 	font-family: "verveine", sans-serif;
+	font-size: 36px;
+}
+
+.professional-experience h4 {
+	font-family: "verveine", sans-serif;
+	font-size:  24px;
 }
