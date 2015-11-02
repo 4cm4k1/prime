@@ -10,8 +10,9 @@
 }
 
 .jumbotron {
-	background-image: url('photo.jpg') no-repeat bottom right fixed;
+	background-image: url('photo.jpg');
 	background-size: cover;
+	background: no-repeat bottom right fixed;
 	height: 500px;
 }
 .jumbotron h1 {
