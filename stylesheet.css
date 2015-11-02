@@ -21,7 +21,7 @@
 div .contact-info {
 	font-family: "industry", sans-serif;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 20px;
 	text-shadow: 1px 1px #0E5C0A;
 }
 
@@ -47,4 +47,16 @@ div .profile {
 	font-family: "factoria", sans-serif;
 	font-weight: 600;
 	font-size:  24px;
+}
+
+.professional-experience li {
+	font-family: "industry", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+div .date {
+	font-family: "industry", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
 }
