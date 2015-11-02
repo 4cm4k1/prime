@@ -6,7 +6,7 @@
 }
 
 .jumbotron h1 {
-	font-family: "factoria-n7", sans-serif;
+	font-family: "factoria", sans-serif;
 	font-size: 60px;
 	color: #fff;
 }
@@ -19,7 +19,11 @@
 .infobox {
 	width: 400px;
 }
-
+.professional-experience div {
+	column-count: 2;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+}
 .professional-experience h3 {
 	font-family: "factoria-n6", sans-serif;
 	font-size: 36px;
