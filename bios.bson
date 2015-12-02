@@ -4,8 +4,8 @@
         "first" : "John",
         "last" : "Backus"
     },
-    "birth" : ISODate("1924-12-03T05:00:00Z"),
-    "death" : ISODate("2007-03-17T04:00:00Z"),
+    "birth" : new ISODate("1924-12-03T05:00:00Z"),
+    "death" : new ISODate("2007-03-17T04:00:00Z"),
     "contribs" : [
         "Fortran",
         "ALGOL",
@@ -42,8 +42,8 @@
         "first" : "John",
         "last" : "McCarthy"
     },
-    "birth" : ISODate("1927-09-04T04:00:00Z"),
-    "death" : ISODate("2011-12-24T05:00:00Z"),
+    "birth" : new ISODate("1927-09-04T04:00:00Z"),
+    "death" : new ISODate("2011-12-24T05:00:00Z"),
     "contribs" : [
         "Lisp",
         "Artificial Intelligence",
@@ -75,8 +75,8 @@
         "last" : "Hopper"
     },
     "title" : "Rear Admiral",
-    "birth" : ISODate("1906-12-09T05:00:00Z"),
-    "death" : ISODate("1992-01-01T05:00:00Z"),
+    "birth" : new ISODate("1906-12-09T05:00:00Z"),
+    "death" : new ISODate("1992-01-01T05:00:00Z"),
     "contribs" : [
         "UNIVAC",
         "compiler",
@@ -113,8 +113,8 @@
         "first" : "Kristen",
         "last" : "Nygaard"
     },
-    "birth" : ISODate("1926-08-27T04:00:00Z"),
-    "death" : ISODate("2002-08-10T04:00:00Z"),
+    "birth" : new ISODate("1926-08-27T04:00:00Z"),
+    "death" : new ISODate("2002-08-10T04:00:00Z"),
     "contribs" : [
         "OOP",
         "Simula"
@@ -144,8 +144,8 @@
         "first" : "Ole-Johan",
         "last" : "Dahl"
     },
-    "birth" : ISODate("1931-10-12T04:00:00Z"),
-    "death" : ISODate("2002-06-29T04:00:00Z"),
+    "birth" : new ISODate("1931-10-12T04:00:00Z"),
+    "death" : new ISODate("2002-06-29T04:00:00Z"),
     "contribs" : [
         "OOP",
         "Simula"
@@ -175,7 +175,7 @@
         "first" : "Guido",
         "last" : "van Rossum"
     },
-    "birth" : ISODate("1956-01-31T05:00:00Z"),
+    "birth" : new ISODate("1956-01-31T05:00:00Z"),
     "contribs" : [
         "Python"
     ],
@@ -199,8 +199,8 @@
         "first" : "Dennis",
         "last" : "Ritchie"
     },
-    "birth" : ISODate("1941-09-09T04:00:00Z"),
-    "death" : ISODate("2011-10-12T04:00:00Z"),
+    "birth" : new ISODate("1941-09-09T04:00:00Z"),
+    "death" : new ISODate("2011-10-12T04:00:00Z"),
     "contribs" : [
         "UNIX",
         "C"
@@ -231,7 +231,7 @@
         "aka" : "Matz",
         "last" : "Matsumoto"
     },
-    "birth" : ISODate("1965-04-14T04:00:00Z"),
+    "birth" : new ISODate("1965-04-14T04:00:00Z"),
     "contribs" : [
         "Ruby"
     ],
@@ -250,7 +250,7 @@
         "first" : "James",
         "last" : "Gosling"
     },
-    "birth" : ISODate("1955-05-19T04:00:00Z"),
+    "birth" : new ISODate("1955-05-19T04:00:00Z"),
     "contribs" : [
         "Java"
     ],
