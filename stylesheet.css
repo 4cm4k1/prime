@@ -1,87 +1,110 @@
-.jumbotron {
-	background-image: url('photo.jpg');
-	background-size: cover;
-	background-position: 0% 50%;
-	height: 500px;
+body {
+  font-family: 'industry', sans-serif;
+  font-size: 18px;
+  background: #fff;
+  color: #333;
 }
 
-.jumbotron h1 {
-	font-family: "factoria", sans-serif;
-	font-weight: 700;
-	font-size: 60px;
-	color: #fff;
-	text-shadow: 2px 2px #0E5C0A;
+header {
+  padding: 40px 60px 0 60px;
+  max-width: 100%;
+  background: #efefef url("photo.jpg") no-repeat center;
+  height: 600px;
+  color: #fff;
 }
 
-.jumbotron p {
-	font-family: ;
-	color: #fff;
+header ul {
+  padding-left: 0;
 }
 
-div .contact-info {
-	font-family: "industry", sans-serif;
-	font-weight: 500;
-	font-size: 20px;
-	text-shadow: 1px 1px #0E5C0A;
+header li {
+  display: block;
+  font-size: 22px;
+  text-shadow: 1px 2px #0e5c0a;
+  margin-bottom: 12px;
 }
 
-div .profile {
-	font-family: "industry", sans-serif;
-	font-weight: 500;
-	font-style: italic;
-	font-size: 24px;
-	text-shadow: 1px 1px #0E5C0A;
+header li:last-child {
+  margin-top: 48px;
+  margin-bottom: 0;
+  font-size: 32px;
+  line-height: 36px;
 }
 
-.infobox {
-	width: 400px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'factoria', serif;
 }
 
-.infobox a, .infobox a:visited {
-	color: #fff;
-	text-decoration: none;
+h1 {
+  font-size: 64px;
+  text-shadow: 1px 2px #0e5c0a;
+  margin-bottom: 18px;
+  color: #fff;
 }
 
-.infobox a:hover, .infobox a:active {
-	text-decoration: underline;
+.bio {
+  width: 600px;
+  font-style: italic;
 }
 
-.professional-experience h3 {
-	font-family: "factoria", sans-serif;
-	font-weight: 600;
-	font-size: 36px;
+main {
+  padding: 40px 60px 0 60px;
 }
 
-.professional-experience h4 {
-	font-family: "factoria", sans-serif;
-	font-weight: 600;
-	font-size:  24px;
+a,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
-.professional-experience li {
-	font-family: "industry", sans-serif;
-	font-weight: 400;
-	font-size: 18px;
+a:hover {
+  text-decoration: underline;
 }
 
-div .date {
-	font-family: "industry", sans-serif;
-	font-weight: 600;
-	font-size: 20px;
+header a,
+header a:visited,
+header a:active,
+header a:hover {
+  color: #fff;
 }
 
-.footer {
-	font-family: "industry", sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	text-align: center;
+main p {
+  display: block;
+  float: right;
+  font-weight: bold;
+  background: #f8f8f8;
+  padding: 2px 6px 0 6px;
+  box-shadow: inset 1px 1px 1px #ccc;
 }
 
-.footer a, .footer a:visited {
-	color: #333;
-	text-decoration: none;
+main li {
+  line-height: 28px;
 }
 
-.footer a:hover, .footer a:active {
-	text-decoration: underline;
+footer {
+  margin: 36px 0 18px 0;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  margin: -76px 0 0 0;
+  text-shadow: 1px 2px #0e5c0a;
+  color: #fff;
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 22px;
+  margin-bottom: 0;
 }
