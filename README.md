@@ -2,6 +2,9 @@
 ## Description
 This was the admissions challenge for Prime Digital Academy and is the first assigned Prework challenge.
 ## Changelog
+### 1.2 (Bonus JavaScript Challenge)
+* Uploaded `bonus.js & bonus.html` 
+
 ### 1.1 (First Prework Challenge)
 * Updated to HTML5/CSS3 spec
   * Added `<meta>` tags to `<head>` for search/sharing
