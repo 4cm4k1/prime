@@ -35,3 +35,6 @@ Essentially, I was happy with the overall design, so only minor tweaks were made
 
 ### 1.0 (Admissions Challenge)
 * Initial version
+
+## Known Issues
+* Now that I've committed files that do not relate to the Resume, the scope of this repo has changed, making this README and the file structure obsolete. Planning to change this.
