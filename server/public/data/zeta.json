@@ -1,0 +1,88 @@
+{
+  "people": [
+    {
+      "name": "Paul Sotherland",
+      "location": "Saint Paul",
+      "animal" : "Turtle"
+    },
+    {
+      "name": "Mark Rothermal",
+      "location": "Champlin",
+      "animal": "Turtle"
+    },{
+      "name": "Scott",
+      "location": "Apple Valley",
+      "animal": "Dog"
+    },{
+      "name":"Altamir Coelho",
+      "location":"Minneapolis",
+      "animal":"Lion"
+    },{
+      "name":"Zach Hintgen",
+      "location":"Waconia",
+      "animal":"Rabbit"
+    },{
+      "name":"Sam Musselman",
+      "location":"Richfield",
+      "animal":"Black Bear"
+    },{
+      "name":"Brooks Nagel",
+      "location":"Minneapolis",
+      "animal":"Puma"
+    },{
+      "name":"Eric Anderson",
+      "location":"Minneapolis",
+      "animal":"Owl"
+    },{
+      "name":"Nathan",
+      "location":"Edina",
+      "animal":"Polar Bear"
+    },{
+      "name":"Amber",
+      "location":"Plymouth",
+      "animal":"Owl"
+    },{
+      "name":"Liz",
+      "location":"Bloomington",
+      "animal":"Wookie"
+    },{
+      "name":"Matthew Reinders",
+      "location":"Bloomington",
+      "animal":"Thomson gazelle"
+    },{
+      "name":"Chris Graff",
+      "location":"Minneapolis",
+      "animal":"Moose"
+    },{
+      "name":"Jeremy Cloutier",
+      "location":"Minneapolis",
+      "animal":"Phoenix"
+    },{
+      "name":"Joseph Anderson",
+      "location":"Minneapolis",
+      "animal":"Dolphin"
+    },{
+      "name":"Scott Bromander",
+      "location":"Narnia",
+      "animal":"Aye-aye"
+    },{
+      "name":"Kenzie Bultema",
+      "location":"Inver Grove Heights",
+      "animal":"Snow Leopard"
+    },{
+      "name":"Natalie Koch",
+      "location":"Minneapolis",
+      "animal":"Kittyfoofoo"
+    },{
+      "name":"Anthony Rohr",
+      "location":"Minneapolis",
+      "animal":"Otter"
+    }, {
+      "name": "Kristy Wessel",
+      "location": "Burnsville",
+      "animal": "Clumsy Cat"
+    }
+  ]
+}
+
+
