@@ -1,4 +1,4 @@
-# Zeta Weekend Challenge 02
+# Theta Weekend Challenge 02
 
 Hello Primers!
 
@@ -10,7 +10,7 @@ Don't forget, to test an application with a node server, you will need to enter 
 
 To shut down a server, hold down control and press 'C'. 
 
-I created a new JSON data file, inside it, you will find an array of objects. Each object, is each one of you. It includes your name, your github profile link, and a piece of shoutout feedback from your peers! Awesome right?
+I created a new JSON data file, inside it, you will find an array of objects. Each object, is each one of you. It includes your name, your github profile link, your spirit animal.
 
 You first task is to make an AJAX call from the client side app.js, using the .ajax method, which will be set to GET, and access the '/data' url. When successful, it should bring the data back down. You will then need to combine that with what you learned today about making a carousel. 
 
