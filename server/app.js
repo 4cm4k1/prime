@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 var path = require('path');
-var data = require('./public/data/zeta');
+var data = require('./public/data/theta');
 
 app.set("port", process.env.PORT || 5000);
 
