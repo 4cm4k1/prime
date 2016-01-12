@@ -3,13 +3,11 @@ In this exercise you'll be creating a MongoDB application to store student assig
 
 The purpose of this exercise is to help understand the way Document Databases function, and how to interact with them. 
 
-You may use Jade, HBS (handlebars on the server-side) or Handlebars.js (handlebars on the client-side) if you like. It is not required.
-
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
 
-###Install Robomongo
-[Get it here.](http://robomongo.org/)
+###Install Mongo Chef
+[Get it here.](http://3t.io/mongochef/download/platform/)
 
 Use it. Love it.
 
