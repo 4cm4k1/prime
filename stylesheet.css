@@ -7,11 +7,11 @@ body {
   color: #333;
 }
 /* HIDE <MAIN> UNTIL BUTTON */
-#reveal {
+main, footer {
   display: none;
 }
 /* BUTTON STYLING */
-#button {
+button {
   border-radius: 10%;
   background-color: #0e5c0a;
   border: 1px 1px 1px 1px solid #fff;

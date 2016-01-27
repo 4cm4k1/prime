@@ -1,6 +1,7 @@
 $(document).ready( function() {
-	$("#button").click( function() {
-		$("body #reveal").fadeIn();
+	$('button').click( function() {
+		$('main').fadeIn();
+		$('footer').fadeIn();
 		$(this).fadeOut();
 	})
 });
