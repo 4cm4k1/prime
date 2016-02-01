@@ -27,3 +27,6 @@ Example, "information,information,information" > "information, information, info
 ## Pro Mode
 Style the result to be 'prettier'! Part of making it prettier means that you will want to remove the bullets from 
 the list items. However, in this mode, you are not allowed to change it from 'li' items as it is now.
+
+## Pro Extended
+Bring in the [Bootstrap Library](http://getbootstrap.com/) and use at least 4 of the elements in your app.
