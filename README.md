@@ -29,4 +29,4 @@ Style the result to be 'prettier'! Part of making it prettier means that you wil
 the list items. However, in this mode, you are not allowed to change it from 'li' items as it is now.
 
 ## Pro Extended
-Bring in the [Bootstrap Library](http://getbootstrap.com/) and use at least 4 of the elements in your app.
+Install the [Bootstrap Library](http://getbootstrap.com/). Read the documentation and determine how to apply Bootstrap classes to style your page. Use at least 4 Bootstrap-specific classes.
