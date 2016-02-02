@@ -1,75 +1,101 @@
-var atticus = ["Atticus", "2405", "47000", 3];
-var jem = ["Jem", "62347", "63500", 4];
-var boo = ["Boo", "11435", "54000", 3];
-var scout = ["Scout", "6243", "74750", 5];
+//	ANTHONY MAKI 2016-02-02
+
+//	EMPLOYEE CONSTRUCTOR
+//	====================
+function Employee(name, employeeNumber, income, rating, bonusPercentage, adjustedIncome, bonusAmount) {
+	this.name = name;
+	this.employeeNumber = employeeNumber;
+	this.income = income;
+	this.rating = rating;
+	this.bonusPercentage = bonusPercentage;	//	These property values will
+	this.adjustedIncome = adjustedIncome;		//	be stored later in the 
+	this.bonusAmount = bonusAmount;					//	functions below.
+}
+
+//	NEW EMPLOYEE OBJECTS
+//	====================
+
+var atticus = new Employee("Atticus", "2405", "47000", 3, null, null, null);
+var jem = new Employee("Jem", "62347", "63500", 4, null, null, null);
+var boo = new Employee("Boo", "11435", "54000", 3, null, null, null);
+var scout = new Employee("Scout", "6243", "74750", 5, null, null, null);
 
 var employees = [atticus, jem, boo, scout];
 
-function calculateSTI(empInfo) {
-	var name = empInfo[0];
-	var empNumber = empInfo[1];
-	var currentSalary = Math.round(parseFloat(empInfo[2]));
-	var rating = empInfo[3];
-	
-	var processedEmployee = [];
-	var bonus = 0;
-	var bonusPercentage = 0;
-	var adjSalary = currentSalary;	// base + STI
-	var totalBonus = bonus;
+employeeBonuses(employees);
 
-	// calc sti
-	switch(rating) {
+//	MASTER FUNCTION
+//	===============
+
+function employeeBonuses (employeesArray) {
+	for (var i = 0; i < employeesArray.length; i++) {
+		employeesArray[i].bonusPercentage = bonusPercentage(employeesArray[i]);	//	MODULE 1
+		employeesArray[i].adjustedIncome = adjustedIncome(employeesArray[i]);	//	MODULE 2
+		employeesArray[i].bonusAmount = bonusAmount(employeesArray[i]);	//	MODULE 3
+		$('#employees ul').append('<li class="list-group-item"><strong>' + employeesArray[i].name + ':</strong><br/>' + employeesArray[i].bonusPercentage + ' % bonus<br/>$' + employeesArray[i].adjustedIncome + ' adjusted annual income<br/>$' + employeesArray[i].bonusAmount + ' bonus');
+	};
+}
+
+//	MODULES IN employeeBonuses FUNCTION
+//	===================================
+
+// MODULE 1
+function bonusPercentage (employee) {
+	var rat = employee.rating;
+	var bP = employee.bonusPercentage;
+	var eN = employee.employeeNumber;
+	var inc = parseInt(employee.income);
+
+	switch(rat) {
+
 		case 0:
 		case 1:
 		case 2:
-			bonusPercentage = 0;
+			bP = 0;
 			break;
 		case 3:
-			bonusPercentage = .04;
+			bP = .04;
 			break;
 		case 4:
-			bonusPercentage = .06;
+			bP = .06;
 			break;
 		case 5:
-			bonusPercentage = .10;
+			bP = .10;
 			break;
 		default:
-			bonusPercentage = 0;
+			bP = 0;
+			break;
 	}
 
-	bonusPercentage = adjustBonusPercentage(empNumber, bonusPercentage, currentSalary);
-	
-	// build processed array
-	processedEmployee[0] = name;
-	processedEmployee[1] = bonusPercentage;
+	if (eN.length == 4) {
+		bP += .05;
+	}
+	if (inc > 65000) {
+		bP -= .01;
+	}
+	if (bP > .13) {
+		bP = .13;
+	}
 
-	bonus = Math.round(bonusPercentage * currentSalary);
-	adjSalary = currentSalary + bonus;
+	console.log('bonusPercentage function sez: ' + rat + ' ' + bP + ' ' + eN + ' ' + inc);	//	Is this thing on?
 
-	processedEmployee[2] = adjSalary;
-	processedEmployee[3] = bonus;
-
-	return processedEmployee;
+	return bP * 100;
 }
 
-function adjustBonusPercentage(empNumber, bonusPercentage, currentSalary) {
-	if(empNumber.length == 4) {
-		bonusPercentage += .05;
-	}
+// MODULE 2
+function adjustedIncome (employee) {
+	var inc = parseInt(employee.income);
+	var bP = employee.bonusPercentage;
 
-	if(currentSalary > 65000) {
-		bonusPercentage -= .01;
-	}
+	console.log('adjustedIncome function sez: ' + inc + ' ' + bP);	//	Testing, testing
 
-	if(bonusPercentage > .13) {
-		bonusPercentage = .13;
-	}
-
-	return bonusPercentage;
+	return Math.round(inc * (1 + bP / 100));
 }
 
+// MODULE 3
+function bonusAmount (employee) {
+	var inc = parseInt(employee.income);
+	var bP = employee.bonusPercentage;
 
-for(var i = 0; i < employees.length; i++) {
-	console.log(calculateSTI(employees[i]));
-
+	return Math.round(inc * bP / 100);
 }
