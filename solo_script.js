@@ -1,5 +1,15 @@
 // ! ! !
 // Three Bugs
+// ANTHONY MAKI - 2016-02-01
+// 1. In for loop, added [i] to argument being passed into calculateSTI function
+// 2. On line 45, added Math.round() to round to nearest whole number
+// 3. Removed "- 1" on line 71 because it was returning a negative & wrong bonus percent
+
+// Added this initial transition effect of jQuery
+$(document).ready(function(){
+  $('body').delay(500).fadeIn(2000);
+});
+// Above bit of code added
 
 var arrayAtticus = ["Atticus", "2405", "47000", 3];
 var arrayJem = ["Jem", "62347", "63500", 4];
@@ -16,13 +26,13 @@ position = document.getElementById('content');
 //Loop the array, extracting each array and writing information to the DOM
 //Note that the information is not 'clean'
 for(var i = 0; i < array.length; i++){
-	array[i] = calculateSTI(array);
+	array[i] = calculateSTI(array[i]);   // !!! added [i] after array argument
  	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
+	newText = document.createTextNode(array[i][0] + ', ' + array[i][1] + ', ' + array[i][2] + ', ' + array[i][3]);
 	newEl.appendChild(newText);
 	position.appendChild(newEl);
+  document.getElementsByTagName('li')[i].className = 'list-group-item';
 }
-
 
 function calculateSTI(array1) {
   var newArray = [];
@@ -38,7 +48,7 @@ function calculateSTI(array1) {
   }
 
   newArray[1] = bonus;
-  newArray[2] = baseSalary * (1.0 + bonus);
+  newArray[2] = Math.round(baseSalary * (1.0 + bonus)); // !!! Added Math.round()
   newArray[3] = Math.round(baseSalary * bonus);
   console.log(newArray[0] + " " + newArray[1] + " " + newArray[2] + " " + newArray[3]);
   return newArray;
@@ -64,7 +74,7 @@ function getBaseSTI(reviewScore) {
       basePercent = 0.10;
       break;
   }
-  return basePercent - 1; 
+  return basePercent; // !!! basePercent - 1 ?!?!?!!
 }
 
 function getYearAdjustment(employeeNumber) {
