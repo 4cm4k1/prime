@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // do first
-    //loadData();
+    loadData();
 
     // load on event
     $('#load-data').on('click', loadData);
