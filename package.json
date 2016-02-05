@@ -1,5 +1,5 @@
 {
-  "name": "basic_api_lecture",
+  "name": "basic_jquery_ajax_lecture",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js"
   },
-  "author": "Scott Bromander",
+  "author": "Kris Szafranski",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.5",
