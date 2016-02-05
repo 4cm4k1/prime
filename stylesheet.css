@@ -1,0 +1,16 @@
+.bg-yellow {
+	background: yellow;
+}
+
+.bg-red {
+	background: red;
+}
+
+.assessment-buttons {
+	border-radius: 25px;
+	padding: 20px;
+}
+
+.assessment-button {
+	margin: 20px;
+}
