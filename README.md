@@ -6,14 +6,14 @@ This app requires you have installed and can run a local Node server.
 2. Once Homebrew is installed, run the command: brew install node
 3. Navigate to your project directory.
 4. Run the command: npm install.
-4.1 This will install all of the required packages our application requires.
-4.2 You should see a new directory called 'node_modules' in your project now.
+    4. This will install all of the required packages our application requires.
+    4. You should see a new directory called 'node_modules' in your project now.
 
 ## Running the Server
 In order for our app to run and serve the files we need, you'll need to run the server.
 
 1. From the project directory, use the command: npm start
-1.1 You should see a message on the command line: 'Listening on port: 5000'
+    1. You should see a message on the command line: 'Listening on port: 5000'
 2. Go to http://localhost:5000 in your browser to see the index.html file in action
 
 **NOTE Do not close this Terminal window as it is actively running the Node server**
