@@ -3,18 +3,37 @@
     <head lang="en">
         <meta charset="UTF-8">
         <title></title>
-        <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+        <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="/styles/style.css">
         <script type="text/javascript" src="/vendors/jquery.min.js"></script>
         <script type="text/javascript" src="/scripts/app.js"></script>
     </head>
     <body>
-        <div id="peopleContainer">
-            <p class="person-name"></p>
-            <p class="person-github"></p>
-            <div class="person-shoutout"></div>
+    <div class="jumbotron">
+        <h1>Iota Cohort</h1>
+    <div class="container">
+
+        <div id="carousel" class="row">
+            <div id="left-arrow" class="col-md-3 text-right">
+                <button id="left-arrow" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div id="focus" class="col-md-6 text-center"></div>
+            <div id="right-arrow" class="col-md-3">
+                <button id="right-arrow" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
-        <div id="lecture"></div>
+        <div class="row">
+            <div id="carousel-index" class="col-md-12 text-center">
+                <div class="btn-group"></div>
+            </div>
+        </div>
+    </div>
+    </div>
     </body>
 
 </html>
