@@ -1,16 +1,30 @@
-.jumbotron {
-    background: #efefef url('https://lh3.googleusercontent.com/8qfbZlEamVgIy1i_QrkO2g1fRnmBF1fwVk_YZDGOMW1UnlEGFGXJGfERr9bV0l6dfKhF0KG4PgXx_b2gD8yy3EAarS3rdjxyoSSz_F6Ug3vwT0VyOUa5J4Np9IlTeEHlLwZP8ZF9Obm-q8Z_07TZy7ap-AbJXMa-d5D-bP870NTYn-52hlfMQeHG4AsqZme2NqpeC1g21RLiaJ3bwXM6dhgbGVdDVF39dFq77v40YzOr0yi5qKTHEKcu0Z6jwIwgz12odYIoea7ARZFtgUi2-YYltwqfJ_l4BF46_5MUZoAvgf3J6pRadmKxmAccI1t6fwX-B4ujkihtWu6HiBpL3D66p8iZ0EwFEFWUpxT8nW3A0neOvePlM3EhfzpjDgWdHp3C4Roh6K0bM0ObSLqVTy0W80AX1lpsW-ivyqLKk_ruHLsptZRAlhhh5QFTNk6Lld1YbDgJV69fxj7pY4HyQO0k37b6nzMoLrhzWUymA3YtD2_pbpp2odbqGVtpY5zvS6wh1ShCqtxuuA7slRdirVLG8ZXRdNq7EjqldejO1bgl665p5E6h5LtzVXc729dcE__B0Q=w2886-h2164-no') no-repeat center center;
+/* ANTHONY MAKI 2016-02-08 */
+/* BACKGROUND SETTINGS */
+body {
+    background: #efefef url('../images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
+.jumbotron {
+    background: inherit;
+}
+/* HEADINGS */
+.jumbotron h1 {
+    font-size: 72px;
+    color: #efefef;
+    text-shadow: 1px 1px #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2.list-group-item-heading {
+    font-size: 48px;
+}
+/* POSITIONING OF THE CAROUSEL ARROWS */
 #left-arrow button, #right-arrow button {
     margin: 300px 0 300px 0;
 }
-
-.focused {
-    display: block;
-}
-
-.unfocused {
+/* INITIALIZATION - most body elements hidden until JS acts */
+.reveal {
     display: none;
 }
