@@ -53,30 +53,21 @@ function initializePage () {
 }
 
 function buttonClickEvent (element) {
+    $('#person' + currentlyFocusedPerson).fadeOut(1000);
     if (isNaN(element.id)) {
         if (element.id == 'left-arrow' && currentlyFocusedPerson > 0) {
-            $('#person' + currentlyFocusedPerson).fadeOut(1000);
             currentlyFocusedPerson--;
-            $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
         } else if (element.id == 'right-arrow' && currentlyFocusedPerson < $personArray.length-1) {
-            $('#person' + currentlyFocusedPerson).fadeOut(1000);
             currentlyFocusedPerson++;
-            $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
         } else if (element.id == 'right-arrow' && currentlyFocusedPerson == $personArray.length-1) {
-            $('#person' + currentlyFocusedPerson).fadeOut(1000);
             currentlyFocusedPerson = 0;
-            $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
         } else if (element.id == 'left-arrow' && currentlyFocusedPerson == 0) {
-            $('#person' + currentlyFocusedPerson).fadeOut(1000);
             currentlyFocusedPerson = $personArray.length-1;
-            $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
         }
     } else {
-        $('#person' + currentlyFocusedPerson).fadeOut(1000);
         currentlyFocusedPerson = parseInt(element.id);
-        $('#person' + currentlyFocusedPerson).delay(1000).fadeIn();
-        console.log(currentlyFocusedPerson);
     }
+    $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
     clearTimer();
     startAutoAdvance();
 }
@@ -86,15 +77,13 @@ function startAutoAdvance () {
 }
 
 function autoAdvance () {
+    $('#person' + currentlyFocusedPerson).fadeOut(1000);
     if (currentlyFocusedPerson < $personArray.length-1) {
-        $('#person' + currentlyFocusedPerson).fadeOut(1000);
         currentlyFocusedPerson++;
-        $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
     } else if (currentlyFocusedPerson == $personArray.length-1) {
-        $('#person' + currentlyFocusedPerson).fadeOut(1000);
         currentlyFocusedPerson = 0;
-        $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
     }
+    $('#person' + currentlyFocusedPerson).delay(1000).fadeIn(1000);
 }
 
 function clearTimer () {
