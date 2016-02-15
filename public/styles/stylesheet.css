@@ -1,0 +1,37 @@
+/*Weekend Challenge #3 - Anthony Maki - 2016-02-15*/
+body {
+    background: #f0ad4e;
+}
+
+/*CALCULATOR STYLING & POSITIONING*/
+.calculator-wrapper h1 {
+    margin-bottom: 30px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    color: #fff;
+    text-shadow: #f0ad4e 0 2px;
+}
+
+.calculator-wrapper {
+    margin-top: 60px;
+}
+
+/*I CAN HAZ BIGGER BUTTONS?*/
+.btn-xxl {
+    padding: 20px;
+    margin: 14px;
+    font-size: 24px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*BOOTSTRAP OVERRIDES*/
+.input-xxl {
+    padding: 40px;
+    font-size: 32px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    margin-bottom: 14px;
+}
+
+.well {
+    background: #333;
+    border: none;
+}
