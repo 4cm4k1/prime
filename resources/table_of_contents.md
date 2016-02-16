@@ -1,1 +1,0 @@
-# Resources Table of Contents
