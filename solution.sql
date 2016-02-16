@@ -32,6 +32,5 @@ VALUES ('anthonymaki','minneapolis',27,42,137.00);
 
 --  9.  Delete users that reside in Miami or Phoenix and have completed
 --      fewer than 5 transactions.
-SELECT * FROM syntax_practice
-WHERE transactions_completed < 5
+DELETE FROM syntax_practice WHERE transactions_completed < 5
 AND (city = 'phoenix' OR city = 'miami');
