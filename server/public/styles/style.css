@@ -20,6 +20,10 @@ body {
 h2.list-group-item-heading {
     font-size: 48px;
 }
+
+.list-group {
+    width: 555px;
+}
 /* POSITIONING OF THE CAROUSEL ARROWS */
 #left-arrow button, #right-arrow button {
     margin: 300px 0 300px 0;
