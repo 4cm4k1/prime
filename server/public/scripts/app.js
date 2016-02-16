@@ -46,7 +46,7 @@ function populateDOM(data){
     $.each($personArray, function(i, person) {
         $('#focus').append(
             '<div class="reveal list-group" id="person' + i + '">' +
-            '<ul><li class="list-group-item" style="background: #efefef url(\'' + person.imageURL + '\')' +
+            '<ul><li class="list-group-item list-unstyled" style="background: #efefef url(\'' + person.imageURL + '\')' +
             'no-repeat center; background-size: cover; height: 555px;">' +
             '<h2 class="list-group-item-heading" style="color: #efefef; text-shadow: 1px 1px #333;">' + person.name +
             '</h2></li><li class="list-group-item"><h3>Favorite movies</h3>' + person.favoriteMovie1 + '<br/>' +
