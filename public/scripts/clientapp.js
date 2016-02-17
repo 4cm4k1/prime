@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  getData();
   $('#submit-button').on('click', postData);
 });
 
@@ -38,9 +39,12 @@ function getData() {
     url: '/people',
     success: function (data) {
       console.log(data);
-      $('body').append('<p style="float:left;margin:20px;"><strong>' + data[0].name + '</p>');
-      $('body').children().last().append('<br/>' + data[0].address + '<br/>' +
-      data[0].city + ', ' + data[0].state + ' ' + data[0].zip_code);
+      $('#db-content').empty();
+      for (var i = 0; i < data.length; i++) {
+        $('#db-content').append('<p style="float:left;margin:20px;"><strong>' + data[i].name + '</p>');
+        $('#db-content').children().last().append('<br/>' + data[i].address + '<br/>' +
+        data[i].city + ', ' + data[i].state + ' ' + data[i].zip_code);
+      }
     },
   });
 }
