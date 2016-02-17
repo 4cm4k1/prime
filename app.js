@@ -6,66 +6,73 @@ var bodyParser = require('body-parser');
 // bring in pg module
 var pg = require('pg');
 var connectionString = '';
-if(process.env.DATABASE_URL != undefined) {
-    connectionString = process.env.DATABASE_URL + 'ssl';
+if (process.env.DATABASE_URL !== undefined) {
+  connectionString = process.env.DATABASE_URL + 'ssl';
 } else {
-    connectionString = 'postgres://localhost:5432/node-app';
+  connectionString = 'postgres://localhost:5432/iota-node-sql';
 }
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // get data route
-app.get('/people', function(req, res) {
-    var results = [];
-    pg.connect(connectionString, function(err, client, done) {
-        var query = client.query('SELECT * FROM people ORDER BY id DESC;');
+app.get('/people', function (req, res) {
+  var results = [];
+  pg.connect(connectionString, function (err, client, done) {
+    var query = client.query('SELECT * FROM people ORDER BY id DESC;');
 
-        // Stream results back one row at a time
-        query.on('row', function(row) {
-            results.push(row);
-        });
+    // Stream results back one row at a time
+    query.on('row', function (row) {
+      results.push(row);
+    });
 
-        // close connection
-        query.on('end', function() {
-            client.end();
-            return res.json(results);
-        });
+    // close connection
+    query.on('end', function () {
+      client.end();
+      return res.json(results);
+    });
 
-        if(err) {
-            console.log(err);
+    if (err) {
+      console.log(err);
+    }
+  });
+});
+var counter = 0;
+app.post('/people', function (req, res) {
+  counter++;
+  console.log(counter + req.body);
+  var addPerson = {
+    name: req.body.name,
+    address: req.body.address,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body['zip-code'],
+  };
+
+  pg.connect(connectionString, function (err, client, done) {
+    client.query('INSERT INTO people (name, address, city, state, zip_code) VALUES ($1, $2, $3, $4, $5) RETURNING id', [addPerson.name, addPerson.address, addPerson.city, addPerson.state, addPerson.zipCode],
+      function (err, result) {
+        done();
+        if (err) {
+          console.log('Error inserting data: ', err);
+          res.send(false);
+        } else {
+          res.send(result);
         }
-    });
-});
-
-app.post('/people', function(req, res) {
-    var addPerson = {
-        name: req.body.name,
-        address: req.body.address
-    };
-
-    pg.connect(connectionString, function(err, client) {
-        client.query("INSERT INTO people (name, address) VALUES ($1, $2) RETURNING id",
-            [addPerson.name, addPerson.address],
-            function (err, result) {
-                if(err) {
-                    console.log("Error inserting data: ", err);
-                    res.send(false);
-                } else {
-                    res.send(result);
-                }
-            });
-    });
+      });
+  });
 
 });
 
-app.get('/*', function(req, res) {
-    var file = req.params[0] || '/views/index.html';
-    res.sendFile(path.join(__dirname, './public', file));
+app.get('/*', function (req, res) {
+  var file = req.params[0] || '/views/index.html';
+  res.sendFile(path.join(__dirname, './public', file));
 });
 
 
 app.set('port', process.env.PORT || 5000);
-app.listen(app.get('port'), function() {
-    console.log('Listening on port: ', app.get('port'));
+app.listen(app.get('port'), function () {
+  console.log('Listening on port: ', app.get('port'));
 });
