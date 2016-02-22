@@ -1,0 +1,19 @@
+header, main, footer {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.task {
+  padding: 20px;
+}
+
+.task > i, .task > p, .task > button {
+  display: inline;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+}

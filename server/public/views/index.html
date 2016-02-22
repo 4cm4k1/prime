@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Weekend Challenge 4: Full-Stack To-Do List App</title>
+  <meta name="description" content="A simple full-stack to-do list application" />
+  <meta name="author" content="Anthony Maki" />
+  <link rel="stylesheet" href="/vendors/normalize.css" />
+  <link rel="stylesheet" href="/vendors/snackbar.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+  <script type="text/javascript" src="/vendors/snackbar.min.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
+<body>
+  <header>
+    <h1><span id="do">do</span><span id="o">o</span><span id="i">i</span><span id="t">t</span></h1>
+  </header>
+  <main>
+    <section id="task-entry">
+      <form id="task-form">
+        <input type="text" id="taskDesc" name="taskDesc" size="50" placeholder="What haven't you done yet?" />
+        <button type="submit" name="submit-task"><i class="material-icons">add</i></button>
+      </form>
+    </section>
+    <section id="task-list">
+      <!-- Tasks populate here -->
+    </section>
+  </main>
+  <footer>
+    <i class="material-icons">copyright</i> 2016 Anthony Maki &mdash; CC-BY 4.0
+  </footer>
+</body>
+</html>
+
+<!-- CREATE TABLE todo_list (
+	id serial PRIMARY KEY,
+	task_description TEXT NOT NULL DEFAULT 'Make a to-do list!',
+	task_status BOOLEAN NOT NULL DEFAULT FALSE,
+	task_timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW()
+); -->
