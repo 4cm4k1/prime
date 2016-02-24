@@ -1,0 +1,27 @@
+{
+  "name": "prime_group_angular_order_history_app",
+  "version": "1.0.0",
+  "description": "First Angular group activity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/prime_group_angular_order_history_app.git"
+  },
+  "author": "Anthony Maki, Josh Steinberg and Luis De La Espriella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/prime_group_angular_order_history_app/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/prime_group_angular_order_history_app#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "pg": "^4.4.6"
+  }
+}
