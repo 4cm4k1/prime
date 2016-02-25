@@ -1,5 +1,5 @@
 <div class="person" id="{{info.id}}">
   <h3>{{info.first_name}} {{info.last_name}}</h3>
-  <button ng-show="info.count > 0" ng-click="getOrders(info.id)">Show Orders ({{info.count}})</button>
+  <button class="btn btn-primary" ng-show="info.count > 0" ng-click="getOrders(info.id)">Show Orders ({{info.count}})</button>
   <p ng-show="info.count == 0">No orders for this customer.</p>
 </div>

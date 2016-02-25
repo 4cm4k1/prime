@@ -9,6 +9,7 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/customerInfo.js"></script>
   <script type="text/javascript" src="/scripts/orderInfo.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
   <link rel="stylesheet" href="/styles/style.css" />
 
@@ -16,22 +17,24 @@
 <body ng-app="myApp">
   <div class="container">
     <header class="jumbotron">
-      <h1>Cowabunga dudes!</h1>
+      <h1>Angular Arrrrrmada's<br/>Angular Order History App</h1>
+      <p>...ahoy!</p>
     </header>
     <main>
       <div class="row" ng-controller="CustomerController">
-        <section class="customer-list col-md-6" style="background: #fa9898;">
+        <section class="customer-list col-md-6">
           <h2>Customer List</h2>
 
           <article ng-repeat="person in customers | orderBy:'last_name'">
-            <h3>{{person.first_name}} {{person.last_name}}</h3>
-            <button ng-show="person.count > 0" ng-click="getOrders(person.id)">Show Orders ({{person.count}})</button>
-            <p ng-show="person.count == 0">No orders for this customer.</p>
+            <h3>{{person.first_name}} {{person.last_name}}
+            <button class="btn btn-primary" ng-show="person.count > 0" ng-click="getOrders(person.id)">Show Orders ({{person.count}})</button>
+            <span class="label label-danger" ng-show="person.count == 0">No orders for this customer.</span></h3>
+
           </article>
 
         </section>
 
-        <section class="order-history col-md-6" style="background: #fafa98;">
+        <section class="order-history col-md-6">
           <h2>Order History</h2>
 
             <article ng-repeat="order in orders">
@@ -41,7 +44,7 @@
 
       </div>
     </main>
-    <footer>
+    <footer class="text-muted">
       &copy; 2016 Angular Arrrrrrrrrrmadas!!!!111one
     </footer>
   </div>

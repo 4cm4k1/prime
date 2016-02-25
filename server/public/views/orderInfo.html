@@ -1,5 +1,24 @@
 <div class="order" id="{{info.order_id}}">
   <h3>Order # {{info.order_id}}</h3>
-  {{info.quantity}} {{info.description}} {{info.unit_price}} {{info.item_total}}
-  {{info.street}}, {{info.city}}, {{info.state}} {{info.zip}}
+  <h4><span class="label label-info">Shipped to:</span> {{info.street}}, {{info.city}}, {{info.state}} {{info.zip}}</h4>
+  <div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Product Description</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{info.quantity}}</td>
+            <td>{{info.description}}</td>
+            <td>{{info.unit_price}}</td>
+            <td>{{info.item_total}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
