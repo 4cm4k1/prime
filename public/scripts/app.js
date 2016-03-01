@@ -1,17 +1,17 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', []);
 
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.controller('IndexController', ['$scope', '$http', function($scope, $http) {
 
-    $routeProvider
-        .when('/home', {
-            templateUrl: '/views/templates/petfinder.html',
-            controller: 'PetController'
-        })
-        .when('/favorites', {
-            templateUrl: '/views/templates/favorites.html',
-            controller: 'FavoritesController'
-        })
-        .otherwise({
-            redirectTo: 'home'
+    $scope.people = [];
+
+    function getPeople() {
+        $http.get('/data').then(function(response) {
+            $scope.people = response.data;
+            console.log(response.data);
         });
+
+    }
+
+    getPeople();
+
 }]);

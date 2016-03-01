@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pets!</title>
+    <title>Mongo!</title>
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <!--<script type="text/javascript" src="/vendors/angular-route.min.js"></script>-->
     <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/petController.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/favoritesController.js"></script>
 
     <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
 </head>
 <body ng-app="myApp">
-    <header ng-include="'/views/templates/nav.html'"></header>
+    <div ng-controller="IndexController">
+        <h1>Iota Mongo!</h1>
+        <div ng-repeat="person in people">
+            {{person.name}}
+        </div>
 
-    <main ng-view></main>
+    </div>
 
 </body>
 </html>
