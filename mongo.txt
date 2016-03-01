@@ -1,0 +1,80 @@
+//  1. Create a collection named orders.
+
+db.createCollection('orders')
+
+//  2. Insert at least 3 documents that represent an order. IMPORTANT: See section below for fields.
+
+//  Speeding things up!
+var orders = db.orders
+
+//  Prettified MongoDB Insert statement
+orders.insert([
+  {
+    orderDate: new Date('2014-07-02'),
+    orderTotal: 32.60,
+    lineItems: [
+      {
+        unitPrice: 16.30,
+        quantity: 2,
+        productName: 'Amazeballs'
+      }
+    ]
+  },
+  {
+    orderDate: new Date('2015-05-03'),
+    orderTotal: 15.75,
+    lineItems: [
+      {
+        unitPrice: 5.25,
+        quantity: 3,
+        productName: 'Cards Against Humanity'
+      }
+    ]
+  },
+  {
+    orderDate: new Date('2016-04-04'),
+    orderTotal: 30.00,
+    lineItems: [
+      {
+        unitPrice: 5.00,
+        quantity: 4,
+        productName: 'Secret Hitler'
+      }, {
+        unitPrice: 2.00,
+        quantity: 5,
+        productName: 'Art'
+      }
+    ]
+  },
+  {
+    orderDate: new Date('2012-02-06'),
+    orderTotal: 40.00,
+    lineItems: [
+      {
+        unitPrice: 5.00,
+        quantity: 8,
+        productName: 'Death Sticks'
+      }
+    ]
+  }
+])
+
+// 3. Find a single order document, any order document.
+
+orders.findOne()
+
+// 4. Find all orders and make them look pretty.
+
+orders.find().pretty()
+
+// 5. Find all orders with an orderDate that is prior to 1/1/2016.
+
+orders.find({orderDate: {$lt: new Date('2016-01-01')}})
+
+// 6. Find all orders with an orderDate that is after 1/1/2016.
+
+orders.find({orderDate: {$gt: new Date('2016-01-01')}})
+
+// 7. Find orders with lineItems that have a quantity that is less than 50, but greater than 5.
+
+orders.find({'lineItems.quantity': {$lt: 50, $gt: 5}})
