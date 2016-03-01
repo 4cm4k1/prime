@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <h2>Find-a-Pet!</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 text-right">
+        <form>
+            <select ng-model="animalType" ng-options="animal as animal.label for animal in animalTypes track by animal.type">
+            </select>
+            <button class="btn btn-info" ng-click="findPet()">Find Pet</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <p>Favorites: {{numFaves}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 text-right">
+        <img ng-if="pet.media.photos.photo[2].$t" ng-src="{{pet.media.photos.photo[2].$t}}" />
+    </div>
+    <div class="col-md-5">
+        <h3>{{pet.name.$t}}</h3>
+        <p>{{pet.description.$t}}</p>
+        <p ng-show="pet.name"><button class="btn btn-info" ng-click="addFavorite()">Add to Favorites</button></p>
+    </div>
+</div>
