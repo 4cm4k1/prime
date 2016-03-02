@@ -1,10 +1,16 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller('IndexController', ['$scope', '$http', function($scope, $http) {
-
-    $scope.people = [];
+    $scope.people;
     $scope.name = '';
     $scope.location = '';
+
+    function getData() {
+        $http.get('/person').then(function(response) {
+            $scope.people = response.data;
+
+        });
+    }
 
     $scope.addPerson = function() {
         var person = {
@@ -12,19 +18,28 @@ myApp.controller('IndexController', ['$scope', '$http', function($scope, $http) 
             location: $scope.location
         };
 
-        $http.post('/data', person).then(function(response) {
+        $http.post('/person', person).then(function(response) {
             $scope.people = response.data;
-        })
+        });
     };
 
-    function getPeople() {
-        $http.get('/data').then(function(response) {
-            $scope.people = response.data;
+    $scope.delete = function(id) {
+        console.log(id);
+        $http.delete('/person/' + id).then(function(response) {
+            getData();
             console.log(response.data);
         });
-
     }
 
-    getPeople();
+    $scope.update = function(id) {
+        console.log(id);
+        var data = {name: 'Scott'};
+        $http.put('/person/' + id, data).then(function(response) {
+            getData();
+        });
+    }
+
+
+    getData();
 
 }]);

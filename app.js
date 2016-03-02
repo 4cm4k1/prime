@@ -2,51 +2,86 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
 var Schema = mongoose.Schema;
-
-mongoose.connect('mongodb://localhost/mongo_lecture');
-mongoose.model('Person', new Schema({"name": String, "location": String}, {collection: 'people'}));
-var Person = mongoose.model('Person');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/data', function(req,res){
-    var query = req.query.peopleSearch;
 
-    if(query){
-        Person.find({"name" : query}, function(err, data){
-            if(err){
-                console.log("ERROR! : ", err);
-            }
-            res.send(data);
-        });
-    } else {
-        Person.find({}, function(err, data){
-            if(err){
-                console.log("ERROR! : ", err);
-            }
-            res.send(data);
-        });
+mongoose.connect('mongodb://localhost/mongo_lecture');
+mongoose.model(
+    'Person',
+    new Schema({
+        "name": String,
+        "location": String
+    },
+    {
+        collection: 'people'
     }
+));
+
+var Person = mongoose.model('Person');
+
+app.get('/person', function(req, res) {
+    console.log('here');
+    Person.find({}, function(err, data) {
+        if(err) {
+            console.log('ERR: ', err);
+        }
+
+        res.send(data);
+    });
 });
 
-app.post('/data', function(req, res) {
+app.post('/person', function(req, res) {
     var addedPerson = new Person({
-        "name" : req.body.name,
-        "location" : req.body.location
+        "name": req.body.name,
+        "location": req.body.location
     });
 
-    addedPerson.save(function(err, data){
-        if(err) console.log(err);
-        Person.find({}, function(err, data){
-            if(err){
-                console.log("ERROR! : ", err);
+    addedPerson.save(function(err, data) {
+        if(err) {
+            console.log('ERR: ', err);
+        }
+
+        Person.find({}, function(err, data) {
+            if(err) {
+                console.log('ERR: ', err);
             }
+
             res.send(data);
         });
     });
+
+
+});
+
+app.delete('/person/:id', function(req, res) {
+    Person.findByIdAndRemove({"_id" : req.params.id}, function(err, data) {
+        if(err) {
+            console.log('ERR: ', err);
+        }
+
+        res.send(data);
+    });
+});
+
+app.put('/person/:id', function(req, res){
+    var newName = req.body.name;
+    Person.findByIdAndUpdate(
+        {_id: req.params.id},
+        {
+            $set: {name: newName}
+        },
+        function(err, data) {
+            if(err) {
+                console.log('ERR: ', err);
+            }
+
+            res.send(data);
+        }
+    );
+
 });
 
 // Serve back static files
