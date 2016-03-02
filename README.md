@@ -1,5 +1,3 @@
-# weekend 5 Challenge Walkthrough
+# iota-mongoose-intro
+Basic mongoose usage in MEAN stack. Uses Bootstrap for CSS.
 
-Code as completed during the walkthrough demo. Implements all base features of assignment. Includes Bootstrap.
-
-Uses Angular Routing, Factories, and PetFinder API.
