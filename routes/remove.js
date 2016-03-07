@@ -5,15 +5,14 @@ var Schema = mongoose.Schema;
 
 var existingHero = mongoose.model('Hero');
 
-router.delete('/', function(req, res) {
-  console.log('Request body is: ', req.body);
-  existingHero.remove({_id: req.body._id}, function(err, data) {
+router.delete('/:id', function(req, res) {
+  existingHero.findByIdAndRemove({"_id": req.params.id}, function(err, data) {
     if(err) {
       console.log('ERR: ', err);
     } else {
       res.send(true);
     }
-  }); 
+  });
 });
 
 router.get('/', function(req, res) {

@@ -8,8 +8,9 @@ myApp.controller('removeController', ['$scope', '$http', function($scope, $http)
   };
 
   /* Couldn't remember/find how to get the specific object I want to remove */
-  $scope.removeHero = function(){
-    var promise = $http.delete('/remove').then(function(response) {
+  $scope.removeHero = function(hero){
+    console.log(hero);
+    var promise = $http.delete('/remove/' + hero).then(function(response) {
       console.log('getSuperHeroes data response: ', response);
     });
     $scope.superHeroes = $scope.getSuperHeroes();
