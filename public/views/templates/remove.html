@@ -1,0 +1,12 @@
+<h2>View &amp; Remove Superheroes</h2>
+<section ng-repeat="superHero in superHeroes">
+  <h3>{{superHero.alias}}</h3>
+  <p>
+    <strong>a.k.a.</strong> {{superHero.first_name}} {{superHero.last_name}} of {{superHero.city}}
+  </p>
+  <p>
+    Equipped with <em>{{superHero.power_name}}</em>!
+  </p>
+  <!-- Couldn't remember/find how to get the specific object I want to remove -->
+  <button class="btn btn-danger" ng-click="removeHero(superHero)">Delete Superhero</button>
+</section>

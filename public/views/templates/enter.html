@@ -1,0 +1,18 @@
+<h2>Enter New Superhero</h2>
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="alias">Alias</label>
+    <input type="text" class="form-control" id="alias" ng-model="alias" placeholder="Alias" />
+    <label class="sr-only" for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" ng-model="firstName" placeholder="First Name" />
+    <label class="sr-only" for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" ng-model="lastName" placeholder="Last Name" />
+    <label class="sr-only" for="city">City</label>
+    <input type="text" class="form-control" id="city" ng-model="city" placeholder="City" />
+    <label class="sr-only" for="powerName">Super Power</label>
+    <select class="form-control" id="powerName" ng-model="powerName" ng-options="superPower.power_name for superPower in superPowers">
+      <option value="">Super Power</option>
+    </select>
+  </div>
+  <button class="btn btn-success" id="enterHero" ng-click="enterHero()">Enter New Superhero</button>
+</form>
