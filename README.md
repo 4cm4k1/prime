@@ -1,9 +1,9 @@
 * Iterate through the stringList and produce the following output:
-"Months listed are March, April, May"
+"Months listed are March, April, May".
 
-* Console log the last element in numList using .length to get the index
+* Console log the last element in numList using .length to get the index.
 
-* Iterate through numList and add all of the elements together and console log the total
+* Iterate through numList and add all of the elements together and console log the total.
 
 * If the second element in boolList is true, add the first and last elements in numList. Otherwise multiple the second element in numList by itself. Console log the output.
 
