@@ -1,7 +1,7 @@
-# prime_solo_jq_01
-The first weekend assignment!
+# prime_peer_jq_01
+Today's peer challenge!
 
-Let's recap the entire week! This challenge will use *all of the things* that you have learned this week, and perhaps a little more. You will be building a system that manages employee information.
+You will be building a system that manages employee information.
 
 Make a form that can capture and store employee information:
 
