@@ -2,6 +2,8 @@
 
 Now that you've learned some of the basics of querying MongoDB via the mongo shell, use that information to query a collection of bios. Remember to switch off with your partner half-way through this exercise.
 
+Check out these docs for more advanced find queries https://docs.mongodb.org/getting-started/shell/query/#specify-conditions-with-operators
+
 ## Instructions
 
 ### Setup
@@ -12,7 +14,7 @@ Now that you've learned some of the basics of querying MongoDB via the mongo she
 
 ### Queries
 
-1. Create a file, `queries.bson` that will contain the queries that correctly address the criteria in the
+1. Create a file, `queries.js` that will contain the queries that correctly address the criteria in the
 steps that follow.
 2. Find documents that have awards.
 3. Find documents that don't have awards.
