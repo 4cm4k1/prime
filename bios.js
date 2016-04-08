@@ -1,4 +1,4 @@
-[{
+db.bios.insert([{
     "_id" : 1,
     "name" : {
         "first" : "John",
@@ -277,4 +277,4 @@
     "contribs" : [
         "Scala"
     ]
-}]
+}]);

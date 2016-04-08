@@ -6,12 +6,9 @@ Now that you've learned some of the basics of querying MongoDB via the mongo she
 
 ### Setup
 
-1. Start the MongoDB server with `mongod`.
-2. In another terminal window, start the Mongo shell with `mongo`.
-3. Create a new database called `challenge`.
-4. Create a collection called `bios` in the new database.
-5. Insert the records from the `bios.bson` file into the `bios` collection.
-NOTE: you should be able to copy/paste the entire array into the appropriate collections method.
+1. Start the Mongo shell with `mongo`.
+2. Create a new database called `challenge`.
+3. Load the data using this command `load('bios.js')`
 
 ### Queries
 
