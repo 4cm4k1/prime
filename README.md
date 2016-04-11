@@ -12,7 +12,7 @@ Run the command `mongod` from the terminal. If it fails, follow the [installatio
 Use it. Love it.
 
 ###Create a new NodeJS application. 
-Create a basic NodeJS application with an express server. Set up a router index.js (for your home page) and also a router assignment.js (for your assignment routes).
+Create a basic NodeJS application with an express server. Set up a router called index.js (for your home page) and also a router called assignment.js (for your assignment routes).
 
 ###Get connected to your database.
 Put the following into your server side app.js file.
