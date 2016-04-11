@@ -68,7 +68,7 @@ On the index page, display the list of all assignments. The customer says that t
 
 ###Additional GET functionality
 
-In addition, the route that reads all assignments should also accept an ID. When it receives the ID, it should be given to the mongoose function `Assignments.find` and return only that one. Otherwise if no ID is supplied, it should return all assignments. 
+In addition, the route that reads all assignments should also accept an ID. When it receives the ID, it should be given to the mongoose function `Assignments.find` and return only that one. Otherwise if no ID is supplied, it should return all assignments.
 
 ###Tying it all together
 
@@ -78,8 +78,8 @@ In your index file, display a list of all assignments that are in the database w
 
 ##HARD MODE
 
-Once you have that working add a button next to each assignment record. When the button is clicked, it will delete the record from the database using Ajax. You will need to create a DELETE route, and will need to use `Assignments.findByIdAndRemove`.
+Once you have that working add a button next to each assignment record. When the button is clicked, it will delete the record from the database using Ajax. You will need to create a DELETE route, and will need to use `Assignments.findByIdAndRemove`.  Feel free to break this into two steps (first find, then remove).
 
 ##PRO MODE
 
-Finally, add another button to each record on the index that allows the user to update the database entry. This will also need to be done via Ajax. Updating should either be done in a modal window, or a `<form>` that shows/hides when the edit button is clicked. You will need to pass the assignment ID and the form data to a new PUT route, and to `Assignments.findByIdAndUpdate`, or alternatively, `Assignments.findById` followed by a `model.save()`.
+Finally, add another button to each record on the index that allows the user to update the database entry. This will also need to be done via Ajax. Updating should either be done in a modal window, or a `<form>` that shows/hides when the edit button is clicked. You will need to pass the assignment ID and the form data to a new PUT route, and to `Assignments.findByIdAndUpdate`, or alternatively, `Assignments.findById` followed by a `model.save()`. Also, feel free to break this into two steps (find and then update).
