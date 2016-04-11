@@ -12,7 +12,7 @@ Run the command `mongod` from the terminal. If it fails, follow the [installatio
 Use it. Love it.
 
 ###Create a new NodeJS application. 
-Create a basic NodeJS application with an express server. Update the index file so that `res.render` sends an object with an array of placeholder assignment objects. Use this to get your index page to load the way you want.
+Create a basic NodeJS application with an express server. Update the index file so that `res.send` sends an object with an array of placeholder assignment objects. Use this to get your index page to load the way you want.
 
 ###Get connected to your database.
 Put the following into your server side app.js file.
