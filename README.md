@@ -6,8 +6,8 @@ The purpose of this exercise is to help understand the way Document Databases fu
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
 
-###Install Mongo Chef
-[Get it here.](http://3t.io/mongochef/download/platform/)
+###Install adminMongo
+[Get it here.](https://github.com/mrvautin/adminMongo)
 
 Use it. Love it.
 
@@ -53,7 +53,7 @@ When creating your model it may be useful to see some [Mongoose Schema documenta
 
 Next you'll need to be able to access the assignments via an API. Use a combination of REST methods and Mongo methods to make a route for reading all assignments, and for creating new assignments.
 
-*Hint:* Use req.body to access the x-www-url-formencoded data that is passed into the API. Also, be sure to test them with Postman.
+*Hint:* Use req.body to access the x-www-url-formencoded data that is passed into the API. Also, be sure to test them with Atom REST client or cURL.
 
 *Remember, in REST:*
 
@@ -74,7 +74,7 @@ In addition, the route that reads all assignments should also accept an ID. When
 
 Create an Ajax `<form>` that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
 
-In your index file, display a list of all assignments that are in the database when the page loads. You can handle this using the template rendering engine (no need to make an Ajax call).
+In your index file, display a list of all assignments that are in the database when the page loads.
 
 ##HARD MODE
 
