@@ -1,4 +1,4 @@
-# Mini-Challenge
+# Peer Challenge
 
 Using the variable provided, produce the following results using JavaScript built in functionality. 
 
