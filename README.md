@@ -5,6 +5,6 @@ Using the variable provided, produce the following results using JavaScript buil
 * 1
 * NaN
 * ['H', 'e', 'l', 'l', 'o']
-* "9032"
+* "1111"
 * 9
 * 'e'
