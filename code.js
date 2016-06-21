@@ -6,7 +6,7 @@ var numList = [13, 78, 34];
 
 var boolList = [false, true, false];
 
-//  Step 1 - TODO
+//  Step 1 - DONE
 function monthsListed (array) {
   var output = '';
   for (var i = 0; i < array.length; i++) {
