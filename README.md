@@ -18,5 +18,5 @@
    
 ***
    
-Your code should consist of 6 code blocks with comments about each block with the corresponding question number.
+Your code should consist of 7 code blocks with comments about each block with the corresponding question number.
 
