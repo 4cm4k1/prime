@@ -8,8 +8,11 @@ Using the variable provided, produce the following results using JavaScript buil
 * "string"
 * 9
 * 'e'
+* "HELLO WORLD!"
+* "Hello World?"
 
 ##Hard Mode
 * "'ello"
 * "!dlroW olleH"
 * "1111"
+* ["Hello", "World!"]
