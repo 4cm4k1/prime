@@ -10,8 +10,9 @@
 
 4)  Iterate through numList and add all of the elements together and console log the total
 
-5) If the second element in boolList is true, add the first and last elements in numList. Otherwise multiply the second element in numList by itself. Console log the output.
+5) If the second element in boolList is true, log the sum of the first and last elements in numList. Otherwise multiply the second element in numList by itself and log the result.
 
 6) Iterate through boolList, if the value is true console log the equivelent index in numList.
 
+Your code should consist of 6 code blocks with comments about each block with the corresponding question number.
 
