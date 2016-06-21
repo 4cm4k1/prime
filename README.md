@@ -5,6 +5,11 @@ Using the variable provided, produce the following results using JavaScript buil
 * 1
 * NaN
 * ['H', 'e', 'l', 'l', 'o']
-* "1111"
+* "string"
 * 9
 * 'e'
+
+##Hard Mode
+* "'ello"
+* "!dlroW olleH"
+* "1111"
