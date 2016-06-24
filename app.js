@@ -58,4 +58,9 @@ var minnesotaUnitedFC = {
   }
 };
 
-console.log(minnesotaUnitedFC.teamName + ' is a ' + minnesotaUnitedFC.sport + ' team in the ' + minnesotaUnitedFC.league + '. It was founded in ' + minnesotaUnitedFC.dateFounded + ', and the owner is ' + minnesotaUnitedFC.owner + '. Coach ' + minnesotaUnitedFC.coach + ' commands a roster of ' + minnesotaUnitedFC.playerRoster.length + ' players: ' + minnesotaUnitedFC.getPlayers());
+console.log(minnesotaUnitedFC.teamName + ' is a ' + minnesotaUnitedFC.sport +
+' team in the ' + minnesotaUnitedFC.league + '. It was founded in ' +
+minnesotaUnitedFC.dateFounded + ', and the owner is ' +
+minnesotaUnitedFC.owner + '. Coach ' + minnesotaUnitedFC.coach +
+' commands a roster of ' + minnesotaUnitedFC.playerRoster.length +
+' players: ' + minnesotaUnitedFC.getPlayers());
