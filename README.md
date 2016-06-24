@@ -1,2 +1,2 @@
-# prime_solo_objects
+# Prime Solo Objects
 Short activity exploring JS objects
