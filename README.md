@@ -1,11 +1,21 @@
+# Peer Challenge 2
+
+## Overview
+
+Lorem ipsum.
+
+## Live Preview
+[Live Preview via htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/4cm4k1/prime_peer_challenge_2/blob/master/index.html)
+
+## Instructions Given
 jQuery Color Block Picker
 You will be creating a little 'pick the block' game with HTML, CSS, and jQuery!
 
-! On document load, append four (or more!) divs on to the DOM with jQuery, each colored with a different color. Each div needs to know which color it is.
+On document load, append four (or more!) divs on to the DOM with jQuery, each colored with a different color. Each div needs to know which color it is.
 
-! Prompt the player to pick one of the color blocks you created at random.
+Prompt the player to pick one of the color blocks you created at random.
 
-! If the player clicks on the correct color block, give them a success message. If they pick the wrong color, let them know.
+If the player clicks on the correct color block, give them a success message. If they pick the wrong color, let them know.
 
 When the player picks the correct color block, prompt the player to pick another block randomly and let them keep playing.
 
