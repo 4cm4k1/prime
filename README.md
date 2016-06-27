@@ -1,5 +1,5 @@
 # Prime Weekend Challenge 1
-hehehehehehee
+
 ## Overview
 
 This project is the first weekend challenge at Prime Digital Academy. The objective was to create a simple application to process insurance claims. Technologies used include Bootstrap and jQuery.
