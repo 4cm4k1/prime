@@ -1,4 +1,4 @@
-# Peer jQuery Challenge
+# Group jQuery Challenge
 You will be building a system that manages used car information. It will look something like this:
 
 ![mockups](mockup.png)
