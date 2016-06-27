@@ -5,7 +5,7 @@
 This project is the first weekend challenge at Prime Digital Academy. The objective was to create a simple application to process insurance claims. Technologies used include Bootstrap and jQuery.
 
 ## Live Preview
-[https://htmlpreview.github.io/?https://github.com/4cm4k1/prime_weekend_challenge_1/blob/master/index.html](Live Preview via htmlpreview.github.io)
+[Live Preview via htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/4cm4k1/prime_weekend_challenge_1/blob/master/index.html)
 
 ## Instructions Given
 
