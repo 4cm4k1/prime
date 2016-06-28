@@ -1,9 +1,29 @@
 //  car records array
+var carList = [];
+
+//  Constructor function for car records
+function Car(make, model, year, carColor, customerRating, price) {
+ this.make = make;
+ this.model = model;
+ this.year = year;
+ this.carColor = carColor;
+ this.customerRating = customerRating;
+ this.price = price;
+}
 
 //  HARD MODE: random car array
 
 $(function(){
-
+  $("main").on("submit", function(event) {
+    var tempMake = $("#make").val();
+    var tempModel = $("#model").val();
+    var tempYear = $("#year").val();
+    var tempCarColor = $("#carColor").val();
+    var tempCustomerRating = $("#customerRating").val();
+    var tempPrice = $("#price").val();
+    var tempCar = new Car(tempMake, tempModel, tempYear, tempCarColor, tempCustomerRating, tempPrice);
+    carList.push(tempCar);
+  });
   //  Event listener for form submission
   $("main").on('click', '#submit', function(){
     //  Form handler function called
@@ -24,8 +44,6 @@ $(function(){
   });
 
 });
-
-//  Constructor function for car records
 
 //  Form handler function
 
