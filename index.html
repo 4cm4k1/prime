@@ -12,9 +12,29 @@
     </header>
     <main>
       <section class="row">
-        <!-- Form -->
+        <form id="carForm">
+          <label for="make">Make</label>
+          <input type="text" name="make" id="make" placeholder="Enter vehicle make" />
+
+          <label for="model">Model</label>
+          <input type="text" name="model" id="model" placeholder="Enter vehicle model" />
+
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year" placeholder="Enter vehicle year" />
+
+          <label for="carColor">Color</label>
+          <input type="text" name="color" id="carColor" placeholder="Enter vehicle color" />
+
+          <label for="customerRating">Customer Rating</label>
+          <input type="text" name="customerRating" id="customerRating" placeholder="Enter customer rating"/>
+
+          <label for="price">Class</label>
+          <input type="text" name="price" id="price" placeholder="Enter vehicle price"/>
+
+          <input type= "submit" />
+        </form>
       </section>
-      <section class="row">
+      <section class="row" id="vehicleOutput">
         <!-- List of Cars -->
         <!-- refreshDOM function will append here -->
       </section>
