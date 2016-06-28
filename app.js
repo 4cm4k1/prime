@@ -3,7 +3,16 @@
 //  HARD MODE: random car array
 
 $(function(){
-
+  $("main").on("submit", function(event) {
+    var tempMake = $("#make").val();
+    var tempModel = $("#model").val();
+    var tempYear = $("#year").val();
+    var tempCarColor = $("#carColor").val();
+    var tempCustomerRating = $("#customerRating").val();
+    var tempPrice = $("#price").val();
+    var tempCar = new Car(tempMake, tempModel, tempYear, tempCarColor, tempCustomerRating, tempPrice);
+    carList.push(tempCar);
+  });
   //  Event listener for form submission
   $("main").on('click', '#submit', function(){
     //  Form handler function called
