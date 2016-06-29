@@ -1,6 +1,6 @@
 # Group jQuery Challenge Week 2
-
-You will create a team randomizer. In order to complete this challenge, you will need to use Javascript and jQuery. Not only will you need to randomly create teams, but you will also need to animate the assignment to add a layer of ‘cool’. 
+## HI 
+You will create a team randomizer. In order to complete this challenge, you will need to use Javascript and jQuery. Not only will you need to randomly create teams, but you will also need to animate the assignment to add a layer of ‘cool’.
 
 The basic functionality should be that you include all 22 of your peers into the randomizer. Then, have a series of buttons, 2 - 10, that will set how many groups you would like to create. You will need to additionally create a generate button, that once a team size is selected, can be pressed to begin the team assigning process.
 
