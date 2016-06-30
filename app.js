@@ -106,11 +106,18 @@ $(function() {
     //  Clears div in DOM that lists teams, and reappends the teams according
     //  to the current value of the teams array
     function appendTeams() {
-        $("#teamList ul").each(function(index) {
-          $(this).delay(500 * index).slideUp(5000, function() {
-            $("#teamList").empty();
-          });
-        });
+      $("#teamList").empty();
+        // $("#teamList ul").each(function(index) {
+        //   $(this).delay(500 * index).slideUp(5000, function() {
+        //     // $("#teamList").empty();
+        //     // $(this).find("ul").remove();
+        //   });
+        //   // var oldStuff = $("#teamList ul").nextAll();
+        //   // var count = oldStuff.length;
+        //   // if (!--count) {
+        //   //   $("#teamList").empty();
+        //   // }
+        // });
         // $("#teamList").delay(1000*numTeams).empty();
         for (var i = 0; i < teams.length; i++) {
             $("#teamList").append("<ul class='list-group'></ul>");
