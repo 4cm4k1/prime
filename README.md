@@ -6,6 +6,6 @@ Here is an image of how things should look:
 
 ![](http://i.imgur.com/kNR9bsI.png)
 
-Here is how things should like in action: 
+Here is a gif of how things should like in action: 
 
 ![](http://i.giphy.com/l46CjOg8GvCqz9igM.gif)
