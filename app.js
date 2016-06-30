@@ -22,7 +22,7 @@ $(function() {
         "Trent"
     ];
 
-    var numTeams = 2;
+    var numTeams = 0;
     var teams = [];
     var maxNumber = parseInt(studentArray.length / 2);
 
@@ -38,7 +38,7 @@ $(function() {
 
     function appendButtons() {
         for (var i = 0; i < maxNumber; i++) {
-            $("#numberOfTeams").append('<button type="button" class="btn btn-lg btn-default" id="numTeamsChosen">' + (i + 1) + '</button>');
+            $("#numberOfTeams").append("<button type='button' class='btn btn-lg btn-default' id='numTeamsChosen'>" + (i + 1) + "</button>");
         }
     }
 
@@ -89,12 +89,16 @@ $(function() {
     }
 
     function appendTeams() {
-        $('#teamList').empty();
+        $("#teamList").empty();
         for (var i = 0; i < teams.length; i++) {
-            $("#teamList").append("<ul class=\"list-group\"></ul>");
-            $("#teamList").find("ul:last").append("<li class=\"list-group-item list-group-item-success\">" + "Team: " + (i + 1) + "</li>");
+            $("#teamList").append("<ul class='list-group'></ul>");
+            $("#teamList").find("ul:last")
+                .append("<li class='list-group-item list-group-item-success'>" +
+                    "<h3>Team " + (i + 1) + "</h3></li>");
             for (var j = 0; j < teams[i].length; j++) {
-                $("#teamList").find("ul:last").append("<li class=\"list-group-item\">" + teams[i][j] + "</li>");
+                $("#teamList").find("ul:last")
+                    .append("<li class='list-group-item'><h4>" + teams[i][j] +
+                        "</h4></li>");
             }
         }
     }
