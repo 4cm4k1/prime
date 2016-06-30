@@ -1,39 +1,38 @@
-$(function(){
+$(function() {
 
-var numOfButtons = 10;
-var numbArray = [];
-var answer = '';
+    var numOfButtons = 10;
+    var numbArray = [];
 
-function appendButtons(numOfButtons){
-  for (var i = 0; i < numOfButtons; i++) {
-    $('#buttonSpace').append("<button type='button' class='btn btn-lg btn-default' id='numChosen'></button>");
-    $('#buttonSpace button:last').text(i);
-  }
-}
+    function appendButtons(numOfButtons) {
+      $('#buttonSpace').append('<div class="btn-group"></div>');
+        for (var i = 0; i < numOfButtons; i++) {
+            $('#buttonSpace .btn-group').append("<button type='button' class='btn btn-lg btn-default' id='numChosen'></button>");
+            $('#buttonSpace button:last').text(i);
+        }
+    }
 
-appendButtons(numOfButtons);
+    function storeNumbers(numChosen) {
+        numbArray.push(numChosen);
 
+        if (numbArray.length >= 2) {
+            appendAnswer(numbArray);
+            numbArray = [];
+        }
+    }
 
-$('#buttonSpace').on('click', '#numChosen', function(){
-  console.log($(this).text());
-})
+    function appendAnswer(numbArray) {
+        $('#answerSpace').empty();
+        var answer = numbArray[0] + numbArray[1];
+        $('#answerSpace').append('<h3></h3>');
+        $('#answerSpace h3').append(numbArray[0] + ' + ' + numbArray[1] + ' = ' + answer);
+    }
 
+    appendButtons(numOfButtons);
 
-function storeNumbers(numChosen, numbArray){
-    numbArray.push(numChosen);
+    $('#buttonSpace').on('click', '#numChosen', function() {
+        var tempNumChosen = parseInt($(this).text());
+        storeNumbers(tempNumChosen);
+    })
 
-    if (numbArray.length === 2){
-    appendAnswer(numbArray);
-    numbArray = [];
-  }
-}
-
-
-//Build this!!!
-function appendAnswer(){
-
-}
-
-
-//End
-})
+    //End
+});
