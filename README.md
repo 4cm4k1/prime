@@ -14,6 +14,6 @@ Gif not quite big enough? See the full video [here](https://dl.dropboxuserconten
 
 <!--<video src="https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4">-->
 
-<video>
-  <source src="https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4" type="video/mp4">
-</video>
+<!--<video>-->
+<!--  <source src="https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4" type="video/mp4">-->
+<!--</video>-->
