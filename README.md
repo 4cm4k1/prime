@@ -11,3 +11,9 @@ Here is a gif of how things should like in action:
 ![](http://i.giphy.com/l46CjOg8GvCqz9igM.gif)
 
 Gif not quite big enough? See the full video [here](https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4).
+
+<video src="https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4">
+
+<video width="320" height="240" controls>
+  <source src="https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4" type="video/mp4">
+</video>
