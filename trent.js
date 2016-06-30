@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-var tempArray=[];
 var studentArray=["richard", "jon", "sahasha", "tracy", "megan", "justin", "hillary", "liz", "brian v", "donovan", "connor", "cormick", "ryan", "kyle", "andrew", "brian a", "anthony", "katie", "trent"]
 var numTeams=2;
 var teams=[];
