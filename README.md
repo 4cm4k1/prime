@@ -9,3 +9,5 @@ Here is an image of how things should look:
 Here is a gif of how things should like in action: 
 
 ![](http://i.giphy.com/l46CjOg8GvCqz9igM.gif)
+
+Gif not quite big enough? See the full video [here](https://dl.dropboxusercontent.com/u/86491916/Exp-Trm-Final.mp4).
