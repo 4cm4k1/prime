@@ -1,5 +1,11 @@
 #jQuery Code Challenge
 
+## Overview
+Placeholder.
+
+## Live Preview
+[Live preview via htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/4cm4k1/prime_assessment_1/blob/master/index.html)
+
 In this challenge you will be creating an application that will create colored `<div>` tag each time the corresponding color is clicked. Also, as each color (button) is clicked, it should also increment the corresponding label. HTML and CSS are provided, the focus here is jQuery. 
 
 Here is an image of how things should look:
