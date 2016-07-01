@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title></title>
-  </head>
-  <body>
-    <p id="red">Total red: 0</p>
-    <p id="yellow">Total yellow: 0</p>
-    <p id="green">Total green: 0</p>
-    <p id="blue">Total blue: 0</p>
-    
-    
-    <button class="color-button" data-color="red">Red</button>
-    <button class="color-button" data-color="yellow">Yellow</button>
-    <button class="color-button" data-color="green">Green</button>
-    <button class="color-button" data-color="blue">Blue</button>
-    
-    <div class="container">
-    </div>
-  </body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title>Prime Assessment 1</title>
+</head>
+
+<body class="container">
+    <header class="page-header">
+        <h1>Prime Assessment 1 <small>Colored Box Generator App</small></h1>
+    </header>
+    <main>
+        <section id="clickTotals">
+            <p class="lead">Total red: <span class="label label-danger" id="red">0</span></p>
+            <!-- I know Bootstrap's class here is not actually yellow, but whatevs. -->
+            <p class="lead">Total yellow: <span class="label label-warning" id="yellow">0</span></p>
+            <p class="lead">Total green: <span class="label label-success" id="green">0</span></p>
+            <p class="lead">Total blue: <span class="label label-primary" id="blue">0</span></p>
+        </section>
+
+        <section id="buttons">
+            <button class="btn btn-lg btn-danger" data-color="red">Red</button>
+            <!-- I know Bootstrap's class here is not actually yellow, but whatevs. -->
+            <button class="btn btn-lg btn-warning" data-color="yellow">Yellow</button>
+            <button class="btn btn-lg btn-success" data-color="green">Green</button>
+            <button class="btn btn-lg btn-primary" data-color="blue">Blue</button>
+        </section>
+
+        <section class="box-container">
+        </section>
+    </main>
+</body>
+
 </html>
