@@ -14,7 +14,16 @@
     </header>
     <main>
       <section id="buttons">
-        <button type="button" name="button" id="randomGIF" class="btn btn-lg btn-primary">Random GIF!</button>
+        <div id="randomStuff" class="input-group">
+          <input type="text" class="input-lg form-control" placeholder="Add search terms or tags…" id="tags">
+          <div class="input-group-btn">
+            <button type="button" name="button" id="randomGIF" class="btn btn-lg btn-primary">Random GIF</button>
+            <button type="button" name="button" id="randomSticker" class="btn btn-lg btn-success">Random Sticker</button>
+            <button type="button" name="button" id="trending" class="btn btn-lg btn-info">Trending GIFs</button>
+            <button type="button" name="button" id="searchGIF" class="btn btn-lg btn-warning">Search GIFs</button>
+            <button type="button" name="button" id="searchSticker" class="btn btn-lg btn-danger">Search Stickers</button>
+          </div>
+        </div>
       </section>
 
       <section id="allTheGIFs"></section>
