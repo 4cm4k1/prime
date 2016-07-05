@@ -11,7 +11,7 @@ var randomGIFwidth = 0;
 var randomGIFsrc = '';
 
 function getRandomGIF() {
-  randomGIFobj = $.get("http://api.giphy.com/v1/gifs/random?api_key=" + giphyAPIkey)
+  randomGIFobj = $.get("https://api.giphy.com/v1/gifs/random?api_key=" + giphyAPIkey)
   .done(function(){
     console.log('This is what I got back:', randomGIFobj);
   })
