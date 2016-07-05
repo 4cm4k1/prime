@@ -19,6 +19,7 @@ function getRandomGIF() {
     randomGIFheight = randomGIFobj.responseJSON.data.image_height;
     randomGIFwidth = randomGIFobj.responseJSON.data.image_width;
     randomGIFsrc = randomGIFobj.responseJSON.data.image_url;
+    randomGIFsrc = randomGIFsrc.replace(/^http:\/\//i, 'https://');
     showRandomGIF();
     console.log('end of always');
   });
