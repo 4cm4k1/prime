@@ -1,5 +1,12 @@
 # Xi Weekend GIF Generator
 
+## Overview
+Placeholder.
+
+## Live Preview
+[Live Preview via htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/4cm4k1/prime_weekend_challenge_2/blob/master/index.html)
+
+## Instructions Given
 Today you will use [jQuery's ajax function](http://api.jquery.com/jquery.ajax/) to create a [random GIF](https://github.com/Giphy/GiphyAPI#random-endpoint) (not like the peanut butter) generator!
 
 Information and examples about the API can be found [here](https://github.com/Giphy/GiphyAPI).
