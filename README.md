@@ -1,6 +1,6 @@
-# Prime Solo Challenge #
+# Prime Solo Challenge 4
 ## Overview
-
+Experimenting with modules in Node.js.
 ## Instructions Given
 ### Module Madness
 In this challenge, you will need to spin up a new project (much like we did in lecture). You will create three modules as specified below, create an app.js that will use these modules!
