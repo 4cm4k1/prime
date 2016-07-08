@@ -1,0 +1,23 @@
+{
+  "name": "peer_node_fs_callback",
+  "version": "1.0.0",
+  "description": "Create a Node application application (no Express here) that will read in a text file called `numbers.txt` containing numbers seperated by a comma. Your application should output the highest number found, the lowest number found, and the average of all the numbers rounded to the closest whole number. Your application should call a function titled `done` when finish and log a message stating so. All logging should be done within the `done` function.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/Peer-Node-FS-Callback.git"
+  },
+  "author": "Ryan Mattson and Anthony Maki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/Peer-Node-FS-Callback/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/Peer-Node-FS-Callback#readme",
+  "dependencies": {
+    "fs": "0.0.2"
+  }
+}
