@@ -2,7 +2,7 @@
 
 The goal for this weekend is to build a browser-based calculator application using AngularJS.
 
-Create a user interface that resembles a classic calculator, with buttons for the digits 0-9 as well as the four basic operators `+ - * /`.
+Using vanilla CSS, Bootstrap or another CSS framework of your choice, create a user interface that resembles a classic calculator, with buttons for the digits 0-9 as well as the four basic operations addition, subtraction, multiplication and division.
 
 ![calculator](http://content.mycutegraphics.com/graphics/school/cartoon-calculator.png)
 
