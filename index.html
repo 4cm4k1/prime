@@ -3,8 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Prime Solo API Challenge</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" charset="utf-8"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body class="container">
+    <header class="page-header">
+      <h1>Prime Solo API Challenge <small>Querying the OMDB API</small></h1>
+    </header>
+    <main>
+      <div class="row">
+        <form class="form-inline">
+          <div class="input-group">
+            <input type="text" class="form-control input-lg" id="movieName" name="movieName" placeholder="Movie name here">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-lg btn-success" id="searchMovie" name="searchMovie">Search for Movie</button>
+              <button type="button" class="btn btn-lg btn-warning" name="randomMovie" id="randomMovie">Random Movie</button>
+            </span>
+          </div>
+        </form>
+      </div>
 
+      <section class="row" id="movies">
+        <!-- Top 3 movies will populate here and then get replaced by search or
+        random queries -->
+      </section>
+    </main>
   </body>
 </html>
