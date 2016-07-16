@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calcApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weekend Challenge 3</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+</head>
+
+<body class="container" ng-controller="CalcCtrl">
+    <header class="page-header">
+        <h1>Prime Weekend Challenge 3 <small>Angular Calculator with Infix-to-Postfix Expression Handling</small></h1>
+    </header>
+    <main class="row">
+        <!-- Calculator container -->
+        <div class="col-md-4 col-md-offset-4 calculator">
+            <form class="">
+                <!-- Output field -->
+                <input type="text" class="form-control input-lg text-right" name="name" placeholder="0" ng-model="output" />
+                <!-- Operand and operator keys -->
+                <!-- First row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">1</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">2</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">3</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">+</button>
+                    </div>
+                </div>
+                <!-- Second row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">4</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">5</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">6</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">-</button>
+                    </div>
+                </div>
+                <!-- Third row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">7</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">8</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">9</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">*</button>
+                    </div>
+                </div>
+                <!-- Fourth row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">0</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">.</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-success btn-block calc-buttons">=</button>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">/</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
