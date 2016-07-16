@@ -61,11 +61,11 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
     };
 
     $scope.concatOutputString = function() {
-
+      //  TODO: Write concatOutputString function
     };
 
     $scope.saveOutputString = function() {
-
+      //  TODO: Write saveOutputString (history) function
     };
 
 }]);
