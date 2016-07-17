@@ -41,31 +41,31 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
     };
 
     $scope.misc = {
-      clear: 'CE'
+        clear: 'CE'
     };
 
     $scope.evaluate = function() {
-      console.log('Display output:', $scope.displayOutput);
+        console.log('Display output:', $scope.displayOutput);
 
-      postfixExpression = first.infixToPostfix($scope.displayOutput);
+        postfixExpression = first.infixToPostfix($scope.displayOutput);
 
-      console.log('Display output converted to postfix:', postfixExpression);
-      console.log('Typeof:', typeof postfixExpression);
+        console.log('Display output converted to postfix:', postfixExpression);
+        console.log('Typeof:', typeof postfixExpression);
 
-      postfixSolution = second.solvePostfix(postfixExpression);
+        postfixSolution = second.solvePostfix(postfixExpression);
 
-      $scope.displayOutput = $scope.displayOutput + ' = ' + postfixSolution;
+        $scope.displayOutput = $scope.displayOutput + ' = ' + postfixSolution;
 
-      console.log('Postfix evaluated:', $scope.displayOutput);
+        console.log('Postfix evaluated:', $scope.displayOutput);
         //  This will take the output string and call the infix to post fix function followed by the postfix evaluation function
     };
 
     $scope.concatOutputString = function() {
-      //  TODO: Write concatOutputString function
+        //  TODO: Write concatOutputString function
     };
 
     $scope.saveOutputString = function() {
-      //  TODO: Write saveOutputString (history) function
+        //  TODO: Write saveOutputString (history) function
     };
 
 }]);
@@ -155,7 +155,7 @@ function InfixToPostfix() {
 function SolvePostfix() {
 
     this.solvePostfix = function(postfix) {
-      console.log(postfix, postfix.length);
+        console.log(postfix, postfix.length);
 
         var resultStack = [];
         postfix = postfix.split(' ').clean();
@@ -183,7 +183,7 @@ function SolvePostfix() {
         if (resultStack.length > 1) {
             return 'error';
         } else {
-          console.log(resultStack);
+            console.log(resultStack);
             return resultStack.pop();
         }
     }
