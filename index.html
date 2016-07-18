@@ -12,11 +12,11 @@
 
 <body class="container" ng-controller="CalcCtrl">
     <header class="page-header">
-        <h1>Prime Weekend Challenge 3 <small>Angular Calculator with Infix-to-Postfix Expression Handling</small></h1>
+        <h1>Prime Weekend Challenge 3 <small>Angular Calculator with Infix-to-Postfix Expression Handling and History</small></h1>
     </header>
     <main class="row">
         <!-- Calculator container -->
-        <div class="col-md-6 col-md-offset-3 calculator">
+        <div class="col-md-6 calculator">
             <form class="">
                 <!-- Output field -->
                 <input type="text" class="form-control input-lg text-right" name="name" placeholder="0" ng-model="displayOutput" />
@@ -24,76 +24,86 @@
                 <!-- First row -->
                 <div class="row">
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.one}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.one)">{{operand.one}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.two}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.two)">{{operand.two}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.three}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.three)">{{operand.three}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">{{operator.add}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons" ng-click="concatOutputString(operator.add)">{{operator.add}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-danger btn-block calc-buttons">{{misc.clear}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-danger btn-block calc-buttons" ng-click="clearOutput()">{{misc.clear}}</button>
                     </div>
                 </div>
                 <!-- Second row -->
                 <div class="row">
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.four}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.four)">{{operand.four}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.five}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.five)">{{operand.five}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.six}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.six)">{{operand.six}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">{{operator.subtract}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons" ng-click="concatOutputString(operator.subtract)">{{operator.subtract}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons">{{operator.pow}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons" ng-click="concatOutputString(operator.pow)">{{operator.pow}}</button>
                     </div>
                 </div>
                 <!-- Third row -->
                 <div class="row">
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.seven}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.seven)">{{operand.seven}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.eight}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.eight)">{{operand.eight}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.nine}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.nine)">{{operand.nine}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">{{operator.multiply}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons" ng-click="concatOutputString(operator.multiply)">{{operator.multiply}}</button>
                     </div>
                     <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons">{{operator.sqrt}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons" ng-click="concatOutputString(operator.sqrt)">{{operator.sqrt}}</button>
                     </div>
                 </div>
                 <!-- Fourth row -->
                 <div class="row">
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.zero}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.zero)">{{operand.zero}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons">{{operand.point}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-default btn-block calc-buttons" ng-click="concatOutputString(operand.point)">{{operand.point}}</button>
                     </div>
                     <div class="col-md-2 col-xs-2">
-                        <button type="button" name="button" class="btn btn-lg btn-success btn-block calc-buttons" ng-click="evaluate()">{{operator.equal}}</button>
+                        <button type="button" name="button" class="btn btn-lg btn-success btn-block calc-buttons" ng-click="evaluate(displayOutput)">{{operator.equal}}</button>
                     </div>
-                    <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons">{{operator.divide}}</button>
+                    <div class="col-md-2 col-xs-2">
+                        <button type="button" name="button" class="btn btn-lg btn-primary btn-block calc-buttons" ng-click="concatOutputString(operator.divide)">{{operator.divide}}</button>
                     </div>
-                    <div class="col-md-3 col-xs-3">
-                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons">{{operator.parens}}</button>
+                    <div class="col-md-2 col-xs-2">
+                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons" ng-click="concatOutputString(operator.leftParens)">{{operator.leftParens}}</button>
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                        <button type="button" name="button" class="btn btn-lg btn-info btn-block calc-buttons" ng-click="concatOutputString(operator.rightParens)">{{operator.rightParens}}</button>
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="col-md-6">
+          <div class="list-group">
+            <a ng-repeat="expression in prevOutputs | reverse track by $index" ng-click="evaluate(expression.expression)" class="list-group-item">
+              <span class="badge">{{expression.solution}}</span> {{expression.expression}} <span class="text-muted small">{{expression.timestamp}}</span>
+            </a>
+          </div>
         </div>
     </main>
 </body>

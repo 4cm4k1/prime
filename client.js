@@ -1,5 +1,11 @@
 angular.module('calcApp', []);
 
+angular.module('calcApp').filter('reverse', function() {
+ return function(items) {
+  return items.slice().reverse();
+ };
+});
+
 angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
 
     //  These create new objects (a and b), from which to call the infixToPostfix and solvePostfix methods respectively on the output string
@@ -10,8 +16,10 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
     var second = new SolvePostfix();
 
     $scope.displayOutput = '';
+    var displayExpression = '';
     var postfixExpression = '';
     var postfixSolution = '';
+    var expressionSolved = false;
     $scope.prevOutputs = []; // Saved as original infix expressions
 
     // Buttons
@@ -36,7 +44,8 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
         divide: '/',
         pow: '^',
         sqrt: 'sqrt', //  This will need a special function since JS doesn't inherently understand sqrt (eg, '^0.5')
-        parens: '( )', //  This will need logic to determine whether to place an opening or ending parens
+        leftParens: '(',
+        rightParens: ')', //  This will need logic to determine whether to place an opening or ending parens
         equal: '='
     };
 
@@ -44,28 +53,73 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
         clear: 'CE'
     };
 
-    $scope.evaluate = function() {
-        console.log('Display output:', $scope.displayOutput);
+    $scope.evaluate = function(exp) {
+        console.log('Display output:', exp);
 
-        postfixExpression = first.infixToPostfix($scope.displayOutput);
+        postfixExpression = first.infixToPostfix(exp);
 
         console.log('Display output converted to postfix:', postfixExpression);
         console.log('Typeof:', typeof postfixExpression);
 
         postfixSolution = second.solvePostfix(postfixExpression);
 
-        $scope.displayOutput = $scope.displayOutput + ' = ' + postfixSolution;
+        displayExpression = exp;
 
-        console.log('Postfix evaluated:', $scope.displayOutput);
+        $scope.displayOutput = exp + ' = ' + postfixSolution;
+
+        expressionSolved = true;
+
+        console.log('Postfix evaluated:', exp);
+
+        $scope.prevOutputs.push({
+          expression: displayExpression,
+          solution: postfixSolution,
+          timestamp: new Date().toLocaleTimeString('en-US')
+        });
         //  This will take the output string and call the infix to post fix function followed by the postfix evaluation function
     };
 
-    $scope.concatOutputString = function() {
-        //  TODO: Write concatOutputString function
+    $scope.concatOutputString = function(valuePressed) {
+      // if(((displayExpression + ' = ' + postfixSolution) === $scope.displayOutput) && (valuePressed === '+' || '-' || '/' || '*' || '^' || 'sqrt')) {
+      //   $scope.displayOutput = postfixSolution;
+      // } else
+
+      if (expressionSolved) {
+        console.log('inside if expressionSolved', expressionSolved);
+        $scope.displayOutput = '';
+
+        switch(valuePressed) {
+          case '+':
+          case '-':
+          case '*':
+          case '/':
+          case '^':
+          case 'sqrt':
+          case '(':
+          console.log('inside if valuePressed', valuePressed);
+          $scope.displayOutput = postfixSolution;
+        }
+
+        expressionSolved = false;
+      }
+
+      if(valuePressed === 'sqrt') {
+        $scope.displayOutput += '^0.5';
+      } else {
+            $scope.displayOutput += valuePressed;
+      }
+
     };
 
-    $scope.saveOutputString = function() {
-        //  TODO: Write saveOutputString (history) function
+    // $scope.saveOutputString = function() {
+    //     //  TODO: Write saveOutputString (history) function
+    // };
+
+    $scope.clearOutput = function() {
+      $scope.displayOutput = '';
+      displayExpression = '';
+      postfixExpression = '';
+      postfixSolution = '';
     };
 
 }]);
