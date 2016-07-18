@@ -8,19 +8,19 @@ angular.module('calcApp').filter('reverse', function() {
 
 angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
 
-    //  These create new objects (a and b), from which to call the infixToPostfix and solvePostfix methods respectively on the output string
-    //  Example usage: a.infixToPostfix(displayOutput);
-    //  Example usage: b.solvePostfix(postfixExpression);
+    //  These create new objects (first and second), from which to call the infixToPostfix and solvePostfix methods respectively on the output string
+    //  Example usage: first.infixToPostfix(displayOutput);
+    //  Example usage: second.solvePostfix(postfixExpression);
 
     var first = new InfixToPostfix();
     var second = new SolvePostfix();
 
-    $scope.displayOutput = '';
-    var displayExpression = '';
-    var postfixExpression = '';
-    var postfixSolution = '';
-    var expressionSolved = false;
-    $scope.prevOutputs = []; // Saved as original infix expressions
+    $scope.displayOutput = '';    //  What's displayed on calculator 'screen'
+    var displayExpression = '';   //  Where 'screen' is saved when evaluated
+    var postfixExpression = '';    //  Postfix version of 'screen' expression
+    var postfixSolution = '';      //  Answer to evaluated expression
+    var expressionSolved = false; //  Calculator state tracker
+    $scope.prevOutputs = [];      //  Log of past expressions solved
 
     // Buttons
     $scope.operand = {
@@ -34,7 +34,7 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
         seven: '7',
         eight: '8',
         nine: '9',
-        point: '.' //  This will need logic to put '0.' if a number does not precede the user placing a '.'
+        point: '.'
     };
 
     $scope.operator = {
@@ -43,9 +43,9 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
         multiply: '*',
         divide: '/',
         pow: '^',
-        sqrt: 'sqrt', //  This will need a special function since JS doesn't inherently understand sqrt (eg, '^0.5')
+        sqrt: 'sqrt',
         leftParens: '(',
-        rightParens: ')', //  This will need logic to determine whether to place an opening or ending parens
+        rightParens: ')',
         equal: '='
     };
 
@@ -54,12 +54,8 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
     };
 
     $scope.evaluate = function(exp) {
-        console.log('Display output:', exp);
 
         postfixExpression = first.infixToPostfix(exp);
-
-        console.log('Display output converted to postfix:', postfixExpression);
-        console.log('Typeof:', typeof postfixExpression);
 
         postfixSolution = second.solvePostfix(postfixExpression);
 
@@ -69,23 +65,16 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
 
         expressionSolved = true;
 
-        console.log('Postfix evaluated:', exp);
-
         $scope.prevOutputs.push({
           expression: displayExpression,
           solution: postfixSolution,
           timestamp: new Date().toLocaleTimeString('en-US')
         });
-        //  This will take the output string and call the infix to post fix function followed by the postfix evaluation function
     };
 
     $scope.concatOutputString = function(valuePressed) {
-      // if(((displayExpression + ' = ' + postfixSolution) === $scope.displayOutput) && (valuePressed === '+' || '-' || '/' || '*' || '^' || 'sqrt')) {
-      //   $scope.displayOutput = postfixSolution;
-      // } else
 
       if (expressionSolved) {
-        console.log('inside if expressionSolved', expressionSolved);
         $scope.displayOutput = '';
 
         switch(valuePressed) {
@@ -111,10 +100,6 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
 
     };
 
-    // $scope.saveOutputString = function() {
-    //     //  TODO: Write saveOutputString (history) function
-    // };
-
     $scope.clearOutput = function() {
       $scope.displayOutput = '';
       displayExpression = '';
@@ -125,13 +110,10 @@ angular.module('calcApp').controller('CalcCtrl', ['$scope', function($scope) {
 }]);
 
 
-//  Imported functions from Nic Raboy - https://thepolyglotdeveloper.com
+//  The code BELOW is cited from Nic Raboy (https://thepolyglotdeveloper.com)
+//  And lightly adapted for my purposes (and added a bug fix)
 
-// Example implementation of InfixToPostfix
-// var ms = new InfixToPostfix();
-// console.log(ms.infixToPostfix('5 + 3 * 6 - ( 5 / 3 ) + 7'));
-
-//  Infix to Postfix conversion
+//  Two additional methods needed on the String and Array global objects:
 
 String.prototype.isNumeric = function() {
     return !isNaN(parseFloat(this)) && isFinite(this);
@@ -145,6 +127,8 @@ Array.prototype.clean = function() {
     }
     return this;
 }
+
+//  Infix to Postfix conversion function:
 
 function InfixToPostfix() {
 
@@ -204,14 +188,17 @@ function InfixToPostfix() {
 
 }
 
-//  Postfix evaluation
+//  Postfix evaluation function:
 
 function SolvePostfix() {
 
     this.solvePostfix = function(postfix) {
-        console.log(postfix, postfix.length);
 
         var resultStack = [];
+        //  The line BELOW was missing the custom '.clean()' method, which was
+        //  leading to there being an empty string in the last index of the
+        //  array, which in turn caused this function to return an empty string
+        //  as the 'solution.'
         postfix = postfix.split(' ').clean();
         console.log(postfix);
         for (var i = 0; i < postfix.length; i++) {
