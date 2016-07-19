@@ -28,7 +28,7 @@ app.controller('TwitterController', function($http) {
     console.log('Success:', response);
     console.log('Nouns list:', nounsList);
     for (var i = 0; i < adjectivesList.length; i++) {
-      handlesList.push(adjectivesList[i].name + nounsList[i].name);
+      handlesList.push(adjectivesList[0][i].name + nounsList[0][i].name);
     }
   }
 
