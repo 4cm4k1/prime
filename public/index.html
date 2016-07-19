@@ -8,8 +8,9 @@
     <title>Verbose Shrub: a Twitter handle generator</title>
   </head>
 
-  <body ng-controller="TwitterController as twitter">
-    <button ng-click="twitter.getHandles()">Generate Twitter Handles</button>
+  <body ng-controller="TwitterController as twitter" class="container">
+    <header class="page-header"><h1>Twitter Username Generator</h1></header>
+    <button ng-click="twitter.getHandles()" class="btn btn-success btn-lg">Generate Twitter Handles</button>
     <div>
       <ul>
         <li ng-repeat="handle in twitter.handles track by $index">
