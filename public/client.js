@@ -38,7 +38,7 @@ app.controller('TwitterController', function($http) {
     $http(configNouns).then(handleNounSuccess, handleFailure);
     var handlesList = [];
     for (var i = 0; i < adjectivesList.length; i++) {
-      handlesList.push(adjectivesList[i] + nounsList[i]);
+      handlesList.push(adjectivesList[i].name + nounsList[i].name);
     }
     vm.handle = handlesList;
   }
