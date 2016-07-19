@@ -16,16 +16,10 @@ app.controller('TwitterController', function($http) {
     url: '/nouns'
   }
 
-  function handleAdjectiveSuccess(response) {
+  function handleSuccess(response) {
     adjectivesList.push(response.data);
-    console.log('Success:', response);
-    console.log('Adjectives list:', adjectivesList);
-  }
-
-  function handleNounSuccess(response) {
     nounsList.push(response.data);
     console.log('Success:', response);
-    console.log('Nouns list:', nounsList);
   }
 
   function handleFailure(response) {
