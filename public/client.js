@@ -18,6 +18,7 @@ app.controller('TwitterController', function($http) {
 
   function handleAdjectiveSuccess(response) {
     adjectivesList.push(response.data);
+    adjectivesList[0] = shuffle(adjectivesList[0]);
     console.log('Success:', response);
     console.log('Adjectives list:', adjectivesList);
     $http(configNouns).then(handleNounSuccess, handleFailure);
@@ -25,6 +26,7 @@ app.controller('TwitterController', function($http) {
 
   function handleNounSuccess(response) {
     nounsList.push(response.data);
+    nounsList[0] = shuffle(nounsList[0]);
     console.log('Success:', response);
     console.log('Nouns list:', nounsList);
     for (var i = 0; i < adjectivesList[0].length; i++) {
@@ -34,6 +36,25 @@ app.controller('TwitterController', function($http) {
 
   function handleFailure(response) {
     console.log('Failure:', response);
+  }
+
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
   }
 
   var handlesList = [];
