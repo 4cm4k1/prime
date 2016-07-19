@@ -11,9 +11,11 @@
   <body ng-controller="TwitterController as twitter" class="container">
     <header class="page-header"><h1>Verbose Shrub <small>A Twitter handle generator</small></h1></header>
     <button ng-click="twitter.getHandles()" class="btn btn-success btn-lg">Generate Twitter Handles</button>
-    <div class="list-group handles">
-          <a ng-href="https://twitter.com/{{handle}}" ng-repeat="handle in twitter.handles track by $index" class="list-group-item">{{handle}}</a>
+    <div class="row">
+    <div class="list-group handles col-md-4">
+          <a ng-href="https://twitter.com/{{handle}}" ng-repeat="handle in twitter.handles track by $index" class="list-group-item">@{{handle}}</a>
     </div>
+  </div>
 
   </body>
 </html>
