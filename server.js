@@ -6,7 +6,7 @@ var nouns = require('./routes.nouns.js')
 var app = express();
 
 app.get('/', function(request, response){
-  response.sendFile(path.join(__dirname, './public/views/index.html'));
+  response.sendFile(path.join(__dirname, './public/index.html'));
 })
 
 app.use(express.static('public'));

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="twitterApp">
   <head>
+    <link href="vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="vendors/angular/angular.min.js"></script>
     <script src="client.js"></script>
   </head>
 
   <body>
-    <button ng-click="generateHandles()">Generate Twitter Handles</button>
+    <button ng-click="getHandles()">Generate Twitter Handles</button>
     <div>
+      {{3+2}}
       <ul>
         <li ng-repeat="handle in handles">
           <a ng-href="https://twitter.com/{{handle}}">{{handle}}</a>
