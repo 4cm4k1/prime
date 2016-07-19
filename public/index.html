@@ -8,11 +8,11 @@
     <title>Verbose Shrub: a Twitter handle generator</title>
   </head>
 
-  <body ng-controller="TwitterController">
-    <button ng-click="getHandles()">Generate Twitter Handles</button>
+  <body ng-controller="TwitterController as twitter">
+    <button ng-click="twitter.getHandles()">Generate Twitter Handles</button>
     <div>
       <ul>
-        <li ng-repeat="handle in handles">
+        <li ng-repeat="handle in twitter.handles">
           <a ng-href="https://twitter.com/{{handle}}">{{handle}}</a>
         </li>
       </ul>
