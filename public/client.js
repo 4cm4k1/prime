@@ -32,14 +32,15 @@ app.controller('TwitterController', function($http) {
     console.log('Failure:', response);
   }
 
+  var handlesList = [];
+
   vm.getHandles = function() {
     console.log('Click');
     $http(configAdjectives).then(handleAdjectiveSuccess, handleFailure);
     $http(configNouns).then(handleNounSuccess, handleFailure);
-    var handlesList = [];
     for (var i = 0; i < adjectivesList.length; i++) {
       handlesList.push(adjectivesList[i].name + nounsList[i].name);
     }
-    vm.handle = handlesList;
+    vm.handles = handlesList;
   }
 });
