@@ -11,11 +11,11 @@ router.get('/', function(request, response) {
 
     client.connect(function(err) {
         if (err) {
-            console.log("there was a problem", error);
+            console.log("there was a problem", err);
         }
         client.query("SELECT * FROM nouns", function(err, result) {
             if (err) {
-                console.log("there was another problem", error);
+                console.log("there was another problem", err);
             } else {
               // response.send =
                 console.log(result.rows);

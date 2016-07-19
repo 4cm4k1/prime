@@ -9,11 +9,11 @@ router.get('/', function(request, response) {
             var client = new pg.Client(config);
             client.connect(function(err) {
                 if (err) {
-                    console.log("there was a problem", error);
+                    console.log("there was a problem", err);
                 }
                 client.query("SELECT * FROM adjectives", function(err, result) {
                     if (err) {
-                        console.log("there was another problem", error);
+                        console.log("there was another problem", err);
                     } else {
                         console.log("Go team!");
                         console.log(result.rows);
