@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
-var adjectives = require('./routes.adjectives.js')
-var nouns = require('./routes.nouns.js')
+var adjectives = require('./routes/adjectives.js')
+var nouns = require('./routes/nouns.js')
 
 var app = express();
 
