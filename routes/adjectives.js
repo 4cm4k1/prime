@@ -25,10 +25,6 @@ router.get('/', function(request, response) {
                 }
             })
         });
-
-    });
-    // response.send =
-        // client.
 });
 
 
