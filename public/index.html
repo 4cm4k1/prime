@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="twitterApp">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="client.js"></script>
+  </head>
+
+  <body>
+    <button ng-click="generateHandles()">Generate Twitter Handles</button>
+    <div>
+      <ul>
+        <li ng-repeat="handle in handles">
+          <a ng-href="https://twitter.com/{{handle}}">{{handle}}</a>
+        </li>
+      </ul>
+    </div>
+
+  </body>
+</html>
