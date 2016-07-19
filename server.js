@@ -13,7 +13,7 @@ app.use(express.static('public'));
 
 // routers
 app.use('/adjectives', adjectives);
-app.use('.nouns', nouns);
+app.use('/nouns', nouns);
 
 var server = app.listen(process.env.PORT || 3000, function(){
   var port = server.address().port;
