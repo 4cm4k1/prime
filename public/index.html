@@ -12,7 +12,7 @@
     <button ng-click="twitter.getHandles()">Generate Twitter Handles</button>
     <div>
       <ul>
-        <li ng-repeat="handle in twitter.handles">
+        <li ng-repeat="handle in twitter.handles track by $index">
           <a ng-href="https://twitter.com/{{handle}}">{{handle}}</a>
         </li>
       </ul>
