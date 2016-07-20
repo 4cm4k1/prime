@@ -11,7 +11,7 @@
   <body ng-controller="patronuscontroller">
     <h1>Expecto <em>PATRONUS</em></h1>
     <div class="person">
-    <label>Input Person <small>(first_name last_name)</small></label>
+    <label>Input Person</label>
     <input type="text" id="person_name" ng-model="personText">
     <button ng-click="personSubmit()">Submit Person</button>
     <ul ng-repeat="people in peopleList">
@@ -19,7 +19,7 @@
     </ul>
   </div>
   <div class="patronus">
-    <label>Input Patronus <small>(patronus_name)</small></label>
+    <label>Input Patronus</label>
     <input type="text" id="patronus_name" ng-model="patronusText">
     <button ng-click="patronusSubmit()">Submit Patronus</button>
     <ul ng-repeat="patronus in patronusList">
