@@ -1,0 +1,17 @@
+section ul {
+  margin-top: 1em;
+  opacity: 0.7;
+}
+
+body {
+  background: url('http://67.media.tumblr.com/a29258e6d4ef1894a772b4e2dc6a9f36/tumblr_nhc0u06TIC1tvlw71o1_1280.jpg') center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-header {
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 1em;
+  padding: 1em;
+}

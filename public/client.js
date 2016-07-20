@@ -65,11 +65,13 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
     function handlePostPeopleSuccess(response) {
         console.log('This is what was posted to peoplelist: ', response);
         $scope.peopleList.push(response.data[0]);
+        $scope.personText = '';
     };
 
     function handlePostPatronusSuccess(response) {
         console.log('This is what was posted to patronusList: ', response);
         $scope.patronusList.push(response.data[0]);
+        $scope.patronusText = '';
     };
 
     function handleFailure(response) {
@@ -81,6 +83,7 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
             person: $scope.personText
         };
         $http(configPostPeople).then(handlePostPeopleSuccess, handleFailure);
+        
         // displayPeople();
     };
     $scope.patronusSubmit = function() {
