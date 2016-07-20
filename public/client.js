@@ -1,6 +1,6 @@
 angular.module('patronusapp', []);
 
-angular.controller('patronuscontroller', function($scope, $http){
+angular.module('patronusapp').controller('patronuscontroller', function($scope, $http){
   var vm = this;
 
   var peopleList = [];
@@ -11,8 +11,8 @@ angular.controller('patronuscontroller', function($scope, $http){
     url:"/people"
   };
   var configPatronus = {
-    method:"GET"
-    url:"/patronus"
+    method:"GET",
+    url:"/patronuses"
   };
 
   var configPostPeople = {
@@ -21,7 +21,7 @@ angular.controller('patronuscontroller', function($scope, $http){
   };
   var configPostPatronus = {
     method:"POST",
-    url:"/patronus"
+    url:"/patronuses"
   };
 
   function displayPeople(response){
@@ -48,13 +48,13 @@ angular.controller('patronuscontroller', function($scope, $http){
   function handleFailure(response){
     console.log('There was an error! ', response);
   };
-angular.controller('personSubmit', function($scope){
+  $scope.personSubmit = function(){
   var person = $scope.personText;
-  $http.post(person, configPostPeople).then(handlePostPeopleSuccess, handleFailure);
-});
-angular.controller('patronusSubmit', function($scope){
+  $http.post(configPostPeople, person).then(handlePostPeopleSuccess, handleFailure);
+};
+$scope.patronusSubmit = function(){
   var patronus = $scope.patronusText;
-  $http.post(person, configPostPatronus).then(handlePostPatronusSuccess, handleFailure);
-});
+  $http.post(configPostPatronus, patronus).then(handlePostPatronusSuccess, handleFailure);
+};
 
 });

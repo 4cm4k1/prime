@@ -8,12 +8,12 @@
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="client.js" charset="utf-8"></script>
   </head>
-  <body ng-controller="patronuscontroller as patronus">
+  <body ng-controller="patronuscontroller">
     <h1>Expecto <em>PATRONUS</em></h1>
     <div class="person">
     <label>Input Person <small>(first_name last_name)</small></label>
     <input type="text" id="person_name" ng-model="personText"></input>
-    <button ng-click="personSubmit">Submit Person</button>
+    <button ng-click="personSubmit()">Submit Person</button>
     <ul ng-repeat="people in peopleList">
       <li>{{people}}</li>
     </ul>
@@ -21,7 +21,7 @@
   <div class="patronus">
     <label>Input Patronus <small>(patronus_name)</small></label>
     <input type="text" id="patronus_name" ng-model="patronusText"></input>
-    <button ng-click="patronusSubmit">Submit Patronus</button>
+    <button ng-click="patronusSubmit()">Submit Patronus</button>
     <ul ng-repeat="patronus in patronusList">
       <li>{{patronus}}</li>
     </ul>
