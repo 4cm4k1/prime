@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="patronusapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Expecto Patronus</title>
+  </head>
+  <body ng-controller="patronuscontroller as patronus">
+    <h1>Expecto <em>PATRONUS</em></h1>
+    <div class="person">
+    <label>Input Person <small>(first_name last_name)</small></label>
+    <input type="text" id="person_name"></input>
+    <button ng-click="person_submit">Submit Person</button>
+    <ul ng-repeat>
+  </div>
+  <div class="patronus">
+    <label>Input Patronus <small>(patronus_name)</small></label>
+    <input type="text" id="patronus_name"></input>
+    <button ng-click="patronus_submit">Submit Patronus</button>
+  </body>
+</html>
