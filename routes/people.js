@@ -31,14 +31,14 @@ router.get('/', function(request, response) {
 
 router.post('/', function(request, response) {
     var client = new pg.Client(config);
-
-    var data = request.body.person.split(' ');
+    console.log(request.body.person);
+    var data = request.body.person;
 
     var person = {
-      firstName: data.splice(0, 1),
-      lastName: data.splice(data.length-1, 1)
+      firstName: data.split(" ")[0],
+      lastName: data.split(" ")[1]
     }; //  adjust for incoming object
-
+    console.log('rjm:::', person);
     client.connect(function(err) {
         if (err) {
             console.log('ERROR: You need to think of a time you were truly happy...', err);

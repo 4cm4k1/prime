@@ -17,11 +17,13 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
 
   var configPostPeople = {
     method:"POST",
-    url:"/people"
+    url:"/people",
+    data:null
   };
   var configPostPatronus = {
     method:"POST",
-    url:"/patronuses"
+    url:"/patronuses",
+    data:$scope.patronusText
   };
 
   function displayPeople(response){
@@ -61,12 +63,13 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
     console.log('There was an error! ', response);
   };
   $scope.personSubmit = function(){
-  var person = $scope.personText;
-  $http.post(configPostPeople, person).then(handlePostPeopleSuccess, handleFailure);
+    console.log($scope.personText);
+    configPostPeople.data = {person: $scope.personText};
+  $http(configPostPeople).then(handlePostPeopleSuccess, handleFailure);
 };
 $scope.patronusSubmit = function(){
-  var patronus = $scope.patronusText;
-  $http.post(configPostPatronus, patronus).then(handlePostPatronusSuccess, handleFailure);
+  console.log($scope.patronusText);
+  $http(configPostPatronus).then(handlePostPatronusSuccess, handleFailure);
 };
 displayPeople();
 displayPatronuses();
