@@ -11,10 +11,15 @@
     <input type="text" id="person_name" ng-model="personText"></input>
     <button ng-click="personSubmit">Submit Person</button>
     <ul ng-repeat="people in peopleList">
+      <li>{{people}}</li>
+    </ul>
   </div>
   <div class="patronus">
     <label>Input Patronus <small>(patronus_name)</small></label>
     <input type="text" id="patronus_name" ng-model="patronusText"></input>
     <button ng-click="patronusSubmit">Submit Patronus</button>
+    <ul ng-repeat="patronus in patronusList">
+      <li>{{patronus}}</li>
+    </ul>
   </body>
 </html>
