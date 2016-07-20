@@ -1,4 +1,4 @@
---  Anthony Maki - 2016-02-16
+--  Anthony Maki
 --  1.  Get all users from Chicago
 SELECT * FROM syntax_practice WHERE city = 'chicago';
 
