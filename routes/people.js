@@ -32,15 +32,18 @@ router.get('/', function(request, response) {
 router.post('/', function(request, response) {
     var client = new pg.Client(config);
 
+    var data = request.body.person.split(' ');
+
     var person = {
-      firstName: request.body.person
+      firstName: data.splice(0, 1),
+      lastName: data.splice(data.length-1, 1)
     }; //  adjust for incoming object
 
     client.connect(function(err) {
         if (err) {
             console.log('ERROR: You need to think of a time you were truly happy...', err);
         }
-        client.query('INSERT INTO people (first_name, last_name, patronus_id) VALUES ($1, $2, $3)', [person.firstName, person.lastName, person.patronusID], function(err, result) {
+        client.query('INSERT INTO people (first_name, last_name) VALUES ($1, $2)', [person.firstName, person.lastName], function(err, result) {
             if (err) {
                 console.log('ERROR: Really, try to think happy...', err);
             } else {

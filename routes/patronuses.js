@@ -32,13 +32,13 @@ router.get('/', function(request, response) {
 router.post('/', function(request, response) {
     var client = new pg.Client(config);
 
-    var patronusName = request.body.patronus; //  adjust for incoming object
+    var data = request.body.patronus; //  adjust for incoming object
 
     client.connect(function(err) {
         if (err) {
             console.log('ERROR: You need to think of a time you were truly happy...', err);
         }
-        client.query('INSERT INTO patronuses (patronus_name) VALUES ($1)', [patronusName], function(err, result) {
+        client.query('INSERT INTO patronuses (patronus_name) VALUES ($1)', [data], function(err, result) {
             if (err) {
                 console.log('ERROR: Really, try to think happy...', err);
             } else {
