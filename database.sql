@@ -13,3 +13,21 @@ CREATE TABLE people
 	last_name VARCHAR(20),
 	patronus_id integer REFERENCES patronuses(patronus_id)
 );
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Penguin');
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Puffin');
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Bear');
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Badger');
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Ostrich');
+
+INSERT INTO patronuses (patronus_name)
+VALUES ('Emu');
