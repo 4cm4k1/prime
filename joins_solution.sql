@@ -1,4 +1,4 @@
--- Anthony Maki 2016-02-22
+-- Anthony Maki
 -- 1. Get all customers and their addresses.
 SELECT * FROM customers
   JOIN addresses ON (addresses.customer_id = customers.id);
@@ -6,17 +6,17 @@ SELECT * FROM customers
 SELECT * FROM orders
   JOIN line_items ON (line_items.order_id = orders.id);
 -- 3. Which warehouses have cheetos?
-SELECT warehouse.warehouse, products.description
+SELECT warehouse.*
 	FROM warehouse
 	JOIN warehouse_product ON (warehouse_product.warehouse_id = warehouse.id)
 	JOIN products ON (products.id = warehouse_product.product_id)
-	WHERE description = 'cheetos';
+	WHERE products.description = 'cheetos';
 -- 4. Which warehouses have diet pepsi?
-SELECT warehouse.warehouse, products.description
+SELECT warehouse.*
 	FROM warehouse
 	JOIN warehouse_product ON (warehouse_product.warehouse_id = warehouse.id)
 	JOIN products ON (products.id = warehouse_product.product_id)
-	WHERE description = 'diet pepsi';
+	WHERE products.description = 'diet pepsi';
 -- 5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
 SELECT COUNT(*), customers.first_name, customers.last_name
 	FROM orders
@@ -33,4 +33,5 @@ SELECT COUNT(*)
 SELECT SUM(warehouse_product.on_hand), products.description
 	FROM warehouse_product
 	JOIN products ON (warehouse_product.product_id = products.id)
+  WHERE products.description = 'diet pepsi'
 	GROUP BY products.description;
