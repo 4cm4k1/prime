@@ -15,7 +15,7 @@
     <input type="text" id="person_name" ng-model="personText">
     <button ng-click="personSubmit()">Submit Person</button>
     <ul ng-repeat="people in peopleList">
-      <li>{{people}}</li>
+      <li>{{people.first_name}} {{people.last_name}}</li>
     </ul>
   </div>
   <div class="patronus">

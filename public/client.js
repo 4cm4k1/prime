@@ -34,14 +34,15 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
   };
 
   function handleDisplayPeopleSuccess(response){
-    console.log('This is the list of people: ', response);
-    for(var i = 0; i < response.data.length; i++){
-    var personFullName = response.data[i].first_name + " " + response.data[i].last_name;
-    console.log(personFullName);
-    peopleList.push(personFullName);
-  }
-    console.log(peopleList);
-    $scope.peopleList = peopleList;
+  //   console.log('This is the list of people: ', response);
+  //   for(var i = 0; i < response.data.length; i++){
+  //   var personFullName = response.data[i].first_name + " " + response.data[i].last_name;
+  //   console.log(personFullName);
+  //   peopleList.push(personFullName);
+  // }
+  //   console.log(peopleList);
+  //   $scope.peopleList = peopleList;
+  $scope.peopleList = response.data;
   };
   function handleDisplayPatronusSuccess(response){
     console.log('This is the list of patronuses: ', response);
@@ -66,13 +67,15 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
     console.log($scope.personText);
     configPostPeople.data = {person: $scope.personText};
   $http(configPostPeople).then(handlePostPeopleSuccess, handleFailure);
+  displayPeople();
 };
 $scope.patronusSubmit = function(){
   console.log($scope.patronusText);
   configPostPatronus.data = {patronus: $scope.patronusText};
   $http(configPostPatronus).then(handlePostPatronusSuccess, handleFailure);
+  displayPatronuses();
 };
-displayPeople();
-displayPatronuses();
+// displayPeople();
+// displayPatronuses();
 
 });
