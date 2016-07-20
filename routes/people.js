@@ -33,9 +33,7 @@ router.post('/', function(request, response) {
     var client = new pg.Client(config);
 
     var person = {
-      firstName: req.body.person.firstName,
-      lastName: req.body.person.lastName,
-      patronusID: req.body.person.patronusID
+      firstName: request.body.person
     }; //  adjust for incoming object
 
     client.connect(function(err) {
