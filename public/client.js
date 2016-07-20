@@ -33,11 +33,23 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
 
   function handleDisplayPeopleSuccess(response){
     console.log('This is the list of people: ', response);
-    peopleList.push(response.data);
+    for(var i = 0; i < response.data.length; i++){
+    var personFullName = response.data[i].first_name + " " + response.data[i].last_name;
+    console.log(personFullName);
+    peopleList.push(personFullName);
+  }
+    console.log(peopleList);
+    $scope.peopleList = peopleList;
   };
   function handleDisplayPatronusSuccess(response){
     console.log('This is the list of patronuses: ', response);
-    patronusList.push(response.data);
+    for(var i = 0; i < response.data.length; i++){
+    var patronusName = response.data[i].patronus_name;
+    console.log(patronusName);
+    patronusList.push(patronusName);
+  }
+    console.log(patronusList);
+    $scope.patronusList = patronusList;
   };
   function handlePostPeopleSuccess(response){
     console.log('This is what was posted to peoplelist: ', response);
@@ -56,5 +68,7 @@ $scope.patronusSubmit = function(){
   var patronus = $scope.patronusText;
   $http.post(configPostPatronus, patronus).then(handlePostPatronusSuccess, handleFailure);
 };
+displayPeople();
+displayPatronuses();
 
 });
