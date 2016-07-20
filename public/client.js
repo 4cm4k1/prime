@@ -23,7 +23,7 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
   var configPostPatronus = {
     method:"POST",
     url:"/patronuses",
-    data:$scope.patronusText
+    data:null
   };
 
   function displayPeople(response){
@@ -69,6 +69,7 @@ angular.module('patronusapp').controller('patronuscontroller', function($scope, 
 };
 $scope.patronusSubmit = function(){
   console.log($scope.patronusText);
+  configPostPatronus.data = {patronus: $scope.patronusText};
   $http(configPostPatronus).then(handlePostPatronusSuccess, handleFailure);
 };
 displayPeople();
