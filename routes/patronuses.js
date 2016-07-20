@@ -38,7 +38,7 @@ router.post('/', function(request, response) {
         if (err) {
             console.log('ERROR: You need to think of a time you were truly happy...', err);
         }
-        client.query('INSERT INTO patronuses (patronus_name) VALUES ($1)', [patronus], function(err, result) {
+        client.query('INSERT INTO patronuses (patronus_name) VALUES ($1) RETURNING *', [patronus], function(err, result) {
             if (err) {
                 console.log('ERROR: Really, try to think happy...', err);
             } else {

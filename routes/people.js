@@ -43,7 +43,7 @@ router.post('/', function(request, response) {
         if (err) {
             console.log('ERROR: You need to think of a time you were truly happy...', err);
         }
-        client.query('INSERT INTO people (first_name, last_name) VALUES ($1, $2)', [person.firstName, person.lastName], function(err, result) {
+        client.query('INSERT INTO people (first_name, last_name) VALUES ($1, $2) RETURNING *', [person.firstName, person.lastName], function(err, result) {
             if (err) {
                 console.log('ERROR: Really, try to think happy...', err);
             } else {
