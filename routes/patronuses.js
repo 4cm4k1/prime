@@ -32,7 +32,7 @@ router.get('/', function(request, response) {
 router.post('/', function(request, response) {
     var client = new pg.Client(config);
 
-    var patronusName = req.body.patronusName; //  adjust for incoming object
+    var patronusName = request.body.patronus; //  adjust for incoming object
 
     client.connect(function(err) {
         if (err) {
