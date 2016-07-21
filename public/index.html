@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="angularOlympics">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular Olympics</title>
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css" charset="utf-8" />
+    <link rel="stylesheet" href="style.css" charset="utf-8" />
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+</head>
+
+<body class="container" ng-controller="MainController">
+    <header class="page-header">
+        <h1>Angular Olympics <small>Using $http requests in Angular to retrieve data from multiple Express routes</small></h1>
+    </header>
+
+    <main class="row">
+        <section class="col-md-3">
+            <button type="button" name="button" class="btn btn-lg btn-primary" ng-click="generateAthletes()">Generate Players</button>
+        </section>
+
+        <section class="col-md-9 list-group">
+            <a ng-repeat="athlete in athleteList" class="list-group-item">
+              {{athlete.name}}<br/>
+            {{athlete.origin}}
+          </a>
+        </section>
+    </main>
+</body>
+
+</html>
