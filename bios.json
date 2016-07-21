@@ -1,11 +1,11 @@
-db.bios.insert([{
+{
     "_id" : 1,
     "name" : {
         "first" : "John",
         "last" : "Backus"
     },
-    "birth" : new ISODate("1924-12-03T05:00:00Z"),
-    "death" : new ISODate("2007-03-17T04:00:00Z"),
+    "birth" : {$date: "1924-12-03T05:00:00Z"},
+    "death" : {$date: "2007-03-17T04:00:00Z"},
     "contribs" : [
         "Fortran",
         "ALGOL",
@@ -34,7 +34,7 @@ db.bios.insert([{
             "by" : "National Academy of Engineering"
         }
     ]
-},
+}
 
 {
     "_id" : ObjectId("51df07b094c6acd67e492f41"),
@@ -42,8 +42,8 @@ db.bios.insert([{
         "first" : "John",
         "last" : "McCarthy"
     },
-    "birth" : new ISODate("1927-09-04T04:00:00Z"),
-    "death" : new ISODate("2011-12-24T05:00:00Z"),
+    "birth" : {$date: "1927-09-04T04:00:00Z"},
+    "death" : {$date: "2011-12-24T05:00:00Z"},
     "contribs" : [
         "Lisp",
         "Artificial Intelligence",
@@ -66,8 +66,7 @@ db.bios.insert([{
             "by" : "National Science Foundation"
         }
     ]
-},
-
+}
 {
     "_id" : 3,
     "name" : {
@@ -75,8 +74,8 @@ db.bios.insert([{
         "last" : "Hopper"
     },
     "title" : "Rear Admiral",
-    "birth" : new ISODate("1906-12-09T05:00:00Z"),
-    "death" : new ISODate("1992-01-01T05:00:00Z"),
+    "birth" : {$date: "1906-12-09T05:00:00Z"},
+    "death" : {$date: "1992-01-01T05:00:00Z"},
     "contribs" : [
         "UNIVAC",
         "compiler",
@@ -105,16 +104,15 @@ db.bios.insert([{
             "by" : "United States"
         }
     ]
-},
-
+}
 {
     "_id" : 4,
     "name" : {
         "first" : "Kristen",
         "last" : "Nygaard"
     },
-    "birth" : new ISODate("1926-08-27T04:00:00Z"),
-    "death" : new ISODate("2002-08-10T04:00:00Z"),
+    "birth" : {$date: "1926-08-27T04:00:00Z"},
+    "death" : {$date: "2002-08-10T04:00:00Z"},
     "contribs" : [
         "OOP",
         "Simula"
@@ -136,16 +134,15 @@ db.bios.insert([{
             "by" : "IEEE"
         }
     ]
-},
-
+}
 {
     "_id" : 5,
     "name" : {
         "first" : "Ole-Johan",
         "last" : "Dahl"
     },
-    "birth" : new ISODate("1931-10-12T04:00:00Z"),
-    "death" : new ISODate("2002-06-29T04:00:00Z"),
+    "birth" : {$date: "1931-10-12T04:00:00Z"},
+    "death" : {$date: "2002-06-29T04:00:00Z"},
     "contribs" : [
         "OOP",
         "Simula"
@@ -167,15 +164,14 @@ db.bios.insert([{
             "by" : "IEEE"
         }
     ]
-},
-
+}
 {
     "_id" : 6,
     "name" : {
         "first" : "Guido",
         "last" : "van Rossum"
     },
-    "birth" : new ISODate("1956-01-31T05:00:00Z"),
+    "birth" : {$date: "1956-01-31T05:00:00Z"},
     "contribs" : [
         "Python"
     ],
@@ -191,16 +187,15 @@ db.bios.insert([{
             "by" : "NLUUG"
         }
     ]
-},
-
+}
 {
     "_id" : ObjectId("51e062189c6ae665454e301d"),
     "name" : {
         "first" : "Dennis",
         "last" : "Ritchie"
     },
-    "birth" : new ISODate("1941-09-09T04:00:00Z"),
-    "death" : new ISODate("2011-10-12T04:00:00Z"),
+    "birth" : {$date: "1941-09-09T04:00:00Z"},
+    "death" : {$date: "2011-10-12T04:00:00Z"},
     "contribs" : [
         "UNIX",
         "C"
@@ -222,8 +217,7 @@ db.bios.insert([{
             "by" : "The Japan Prize Foundation"
         }
     ]
-},
-
+}
 {
     "_id" : 8,
     "name" : {
@@ -231,7 +225,7 @@ db.bios.insert([{
         "aka" : "Matz",
         "last" : "Matsumoto"
     },
-    "birth" : new ISODate("1965-04-14T04:00:00Z"),
+    "birth" : {$date: "1965-04-14T04:00:00Z"},
     "contribs" : [
         "Ruby"
     ],
@@ -242,15 +236,14 @@ db.bios.insert([{
             "by" : "Free Software Foundation"
         }
     ]
-},
-
+}
 {
     "_id" : 9,
     "name" : {
         "first" : "James",
         "last" : "Gosling"
     },
-    "birth" : new ISODate("1955-05-19T04:00:00Z"),
+    "birth" : {$date: "1955-05-19T04:00:00Z"},
     "contribs" : [
         "Java"
     ],
@@ -266,8 +259,7 @@ db.bios.insert([{
             "by" : "Canada"
         }
     ]
-},
-
+}
 {
     "_id" : 10,
     "name" : {
@@ -277,4 +269,4 @@ db.bios.insert([{
     "contribs" : [
         "Scala"
     ]
-}]);
+}

@@ -8,9 +8,9 @@ Check out these docs for more advanced find queries https://docs.mongodb.org/get
 
 ### Setup
 
-1. Start the Mongo shell with `mongo`.
-2. Create a new database called `challenge`.
-3. Load the data using this command `load('bios.js')`
+1. Load the data using this command `mongoimport --db challenge --collection bios --drop --file bios.json`
+2. Start the Mongo shell with `mongo`.
+3. Connect to the `challenge` using the mongo shell command `use challenge`
 
 ### Queries
 
@@ -24,4 +24,3 @@ steps that follow.
 5. Find documents with IDs between 3 and 7.
 6. Find documents with awards that were awarded before the year 2000.
 7. Find documents with birth dates, but no death dates.
-
