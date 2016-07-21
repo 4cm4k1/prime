@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="./vendors/bootstrap.min.css" charset="utf-8" />
     <link rel="stylesheet" href="style.css" charset="utf-8" />
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="./vendors/angular-route.min.js" charset="utf-8"></script>
     <script src="client.js" charset="utf-8"></script>
+    <base href="/" />
 </head>
 
-<body class="container" ng-controller="MainController">
+<body class="container">
     <header class="page-header">
-        <h1>Angular Olympics <small>Using $http requests in Angular to retrieve data from multiple Express routes</small></h1>
+        <h1>Angular Olympics <small>Using $http requests in Angular and Express routes</small></h1>
     </header>
 
-    <main class="row">
-        <section class="col-md-3">
-            <button type="button" name="button" class="btn btn-lg btn-primary" ng-click="generateAthletes()">Generate Players</button>
+    <main class="">
+        <section class="">
+            <a class="btn btn-lg btn-primary" href="/archery">Archery</a>
+            <a class="btn btn-lg btn-primary" href="/canoe-kayak">Canoe/Kayak</a>
+            <a class="btn btn-lg btn-primary" href="/modern-pentathlon">Modern Pentathlon</a>
+            <a class="btn btn-lg btn-primary" href="/soccer">Soccer</a>
+            <a class="btn btn-lg btn-primary" href="/taekwondo">Taekwondo</a>
         </section>
 
-        <section class="col-md-9 list-group">
-            <a ng-repeat="athlete in athleteList" class="list-group-item">
-              {{athlete.name}}<br/>
-            {{athlete.origin}}
-          </a>
+        <section ng-view class="">
         </section>
     </main>
 </body>
