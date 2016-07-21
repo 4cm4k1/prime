@@ -10,7 +10,7 @@ Check out these docs for more advanced find queries https://docs.mongodb.org/get
 
 1. Load the data using this command `mongoimport --db challenge --collection bios --drop --file bios.json`
 2. Start the Mongo shell with `mongo`.
-3. Connect to the `challenge` using the mongo shell command `use challenge`
+3. Connect to the `challenge` database using the mongo shell command `use challenge`
 
 ### Queries
 
