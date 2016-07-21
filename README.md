@@ -14,13 +14,14 @@ Check out these docs for more advanced find queries https://docs.mongodb.org/get
 
 ### Queries
 
-1. Create a file, `queries.js` that will contain the queries that correctly address the criteria in the
+Create a file, `queries.js` that will contain the queries that correctly address the criteria in the
 steps that follow.
-2. Find documents that have awards.
-3. Find documents that don't have awards.
-4. Find documents that have contribs for OOP or UNIX.
-5. Find documents with "Turing Award" awards.
-6. Find documents with IDs between 3 and 7.
-7. Find documents with awards that were awarded before the year 2000.
-8. Find documents with birth dates, but no death dates.
+
+1. Find documents that have awards.
+2. Find documents that don't have awards.
+3. Find documents that have contribs for OOP or UNIX.
+4. Find documents with "Turing Award" awards.
+5. Find documents with IDs between 3 and 7.
+6. Find documents with awards that were awarded before the year 2000.
+7. Find documents with birth dates, but no death dates.
 
