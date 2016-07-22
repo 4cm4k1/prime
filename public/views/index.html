@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html ng-app>
-  <head>
+<html ng-app="assignmentTracker">
+
+<head>
     <meta charset="utf-8">
     <title>MEAN Stack App</title>
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" charset="utf-8"/>
     <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
-  </head>
-  <body class="container">
-    <header class="page-header">
-      <h1>MEAN Stack App <small>Assignment Tracker using the MEAN Stack</small></h1>
-    </header>
-    <main>
+</head>
 
+<body class="container" ng-controller="AssignmentCtrl as tracker">
+    <header class="page-header">
+        <h1>MEAN Stack App <small>Assignment Tracker using the MEAN Stack</small></h1>
+    </header>
+    <main class="row">
+      <section class="col-md-6 col-xs-6">
+        <form class="form-inline">
+          <input type="number" placeholder="Assignment number: ex. 1" class="form-control" ng-model="tracker.assignmentNumber"/>
+          <input type="text" placeholder="Student name: ex. Anthony Maki" class="form-control" ng-model="tracker.studentName"/>
+          <input type="number" placeholder="Score: ex. 10" class="form-control" ng-model="tracker.score"/>
+          <input type="date" class="form-control" ng-model="tracker.dateCompleted"/>
+          <button type="button" ng-click="tracker.postAssignment()" class="btn btn-primary">Submit Assignment</button>
+        </form>
+      </section>
+      <section class="col-md-6 col-xs-6">
+        <ul class="list-group">
+          <li ng-repeat="assignment in tracker.assignments" class="list-group-item">
+            <span class="badge">Score: {{assignment.score}}</span>Assignment #: {{assignment.assignment_number}} Student: {{assignment.student_name}} <span class="text-muted">Completed: {{assignment.date_completed}}</span>
+            <button type="button" name="button" ng-click="tracker.deleteAssignment(assignment._id)" class="btn btn-danger">Delete Assignment</button>
+          </li>
+        </ul>
+      </section>
     </main>
-  </body>
+</body>
+
 </html>
