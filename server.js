@@ -11,10 +11,10 @@ var kittySchema = mongoose.Schema({
   name: String
 });
 
-var Kitten = mongoose.model('Kitten', kittySchema);
-
-var silence = new Kitten({ name: 'Silence' });
-console.log(silence.name);
+// var Kitten = mongoose.model('Kitten', kittySchema);
+//
+// var silence = new Kitten({ name: 'Silence' });
+// console.log(silence.name);
 
 kittySchema.methods.speak = function() {
   var greeting = this.name
@@ -38,4 +38,4 @@ Kitten.find(function(err,kittens){
   console.log(kittens);
 });
 
-Kitten.find({ name: /^Fluff/}, callback);
+Kitten.find({ name: /^Fluff/}); //callback);
