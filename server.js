@@ -17,14 +17,18 @@ app.use('/', index);
 app.use('/assignments', assignments);
 
 //  database
-var db = mongoose.connect('mongodb://localhost/something').connection;
+var db = mongoose.connect('mongodb://localhost/assignments').connection;
 
-db.once('open', function(){
-  console.log('Connected to MongoDB');
+db.on('error', function(err) {
+    console.log('MongoDB connection error:', err);
+});
+
+db.once('open', function() {
+    console.log('Connected to MongoDB');
 });
 
 //  server on/port listening
-var server = app.listen(process.env.PORT || 3000, function(){
-  var port = server.address().port;
-  console.log('Listening on port', port);
+var server = app.listen(process.env.PORT || 3000, function() {
+    var port = server.address().port;
+    console.log('Listening on port', port);
 });
