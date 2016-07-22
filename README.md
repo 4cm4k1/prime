@@ -53,7 +53,7 @@ When creating your model it may be useful to see some [Mongoose Schema documenta
 
 Next you'll need to be able to access the assignments via an API. Use a combination of REST methods and Mongo methods to make a route for reading all assignments, and for creating new assignments.
 
-*Hint:* Use req.body to access the x-www-url-formencoded data that is passed into the API. Also, be sure to test them with Atom REST client or cURL.
+*Hint:* Use req.body to access the data that is passed into the API. Also, be sure to test them with Postman or cURL.
 
 *Remember, in REST:*
 
@@ -64,7 +64,7 @@ To remove, delete or archive a resource, use DELETE.
 
 ###Display Assignments
 
-On the index page, display the list of all assignments. The customer says that they may have more than one person working on the assignments at a time, so this list should update every 5 seconds. Only write this data to the DOM if it has changed since the last time it was checked. (hint: save it in a variable)
+On the index page, display the list of all assignments.
 
 ###Additional GET functionality
 
