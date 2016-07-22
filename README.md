@@ -6,8 +6,8 @@ The purpose of this exercise is to help understand the way Document Databases fu
 ###Make sure MongoDB installed, and run mongod.
 Run the command `mongod` from the terminal. If it fails, follow the [installation guide](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/).
 
-###Install adminMongo
-[Get it here.](https://github.com/mrvautin/adminMongo)
+###Install Robomongo
+[Get it here.](https://robomongo.org/)
 
 Use it. Love it.
 
@@ -40,7 +40,7 @@ How to install the module
 `npm install mongoose --save`
 
 How to remove the module
-`npm remove mongodb --save`
+`npm remove mongoose --save`
 
 ###Create an "Assignment" Model
 In your Node application, create a folder called `models`. Within that folder create a mongoose model named `assignments` and give it some properties that an assignment would have. 
@@ -72,7 +72,7 @@ In addition, the route that reads all assignments should also accept an ID. When
 
 ###Tying it all together
 
-Create an Ajax `<form>` that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
+Create text inputs that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
 
 In your index file, display a list of all assignments that are in the database when the page loads.
 
@@ -82,4 +82,4 @@ Once you have that working add a button next to each assignment record. When the
 
 ##PRO MODE
 
-Finally, add another button to each record on the index that allows the user to update the database entry. This will also need to be done via Ajax. Updating should either be done in a modal window, or a `<form>` that shows/hides when the edit button is clicked. You will need to pass the assignment ID and the form data to a new PUT route, and to `Assignments.findByIdAndUpdate`, or alternatively, `Assignments.findById` followed by a `model.save()`.
+Finally, add another button to each record on the index that allows the user to update the database entry. This will also need to be done via Ajax. Updating should either be done in a modal window, or a series of inputs that shows/hides when the edit button is clicked. You will need to pass the assignment ID and the form data to a new PUT route, and to `Assignments.findByIdAndUpdate`, or alternatively, `Assignments.findById` followed by a `model.save()`.
