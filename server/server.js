@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
+var index = require('./routes/index');
 
-app.get( '/', function(req, res) {
-	res.send('Hello!');
-});
+app.use('/', index);
+app.use(express.static('server/public'));
 
 var server = app.listen(3000, function() {
 	var port = server.address().port;
-	console.log('Listening on port: ', port);
+	console.log('Listening on port', port);
 });
