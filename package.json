@@ -19,6 +19,7 @@
   "homepage": "https://github.com/4cm4k1/MEAN-guide#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
