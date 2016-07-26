@@ -8,11 +8,29 @@
     <script src="assets/scripts/client.min.js" charset="utf-8"></script>
   </head>
   <body ng-controller="MainCtrl as list" class="container">
-    <header>
+    <header class="page-header">
       <h1>Prime Assessment 3 <small>Full-Stack App (MEAN)</small></h1>
     </header>
-    <main>
-      
+    <main class="row">
+      <section class="col-md-6 col-md-offset-3">
+        <h2>Grocery Items</h2>
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" name="newItemName" id="newItemName" ng-model="list.newItem.name" class="form-control" placeholder="Bananas (example)"/>
+            <input type="number" name="newItemQty" id="newItemQty" placeholder="Qty" ng-model="list.newItem.qty" class="form-control"/>
+            <button type="button" name="submitNewItem" id="submitNewItem" class="btn btn-primary" ng-click="list.submitNewItem()">+</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <ul class="list-group">
+          <li ng-repeat="item in list.items" class="list-group-item">
+            {{item.name}} <span class="text-muted">Qty: {{item.qty}}</span>
+            <button type="button" class="btn btn-info" ng-click="list.editItem(item._id)">Edit</button>
+            <button type="button" class="btn btn-danger" ng-click="list.deleteItem(item._id)">Delete</button>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
