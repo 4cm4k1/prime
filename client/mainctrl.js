@@ -27,6 +27,7 @@
           item.show = !item.show;
         };
 
+        //  called when user clicks 'save' after editing item
         vm.saveItem = function(item){
           updateItem(item);
         }
