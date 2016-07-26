@@ -53,18 +53,30 @@ router.post('/', function(request, response) {
 });
 
 //  put
+router.put('/:id', function(request, response) {
+    var id = request.params.id;
+    var data = request.body;
+    Item.findByIdAndUpdate(id, data, function(err, item) {
+        if (err) {
+            console.log('Error updating item:', err);
+            response.sendStatus(500);
+        } else {
+            response.sendStatus(200);
+        }
+    });
+});
 
 //  delete
-router.delete('/:id', function(request, response){
-  var id = request.params.id;
-  Item.findByIdAndRemove(id, function(err, item){
-    if (err) {
-        console.log('Error deleting item:', err);
-        response.sendStatus(500);
-    } else {
-        response.sendStatus(200);
-    }
-  });
+router.delete('/:id', function(request, response) {
+    var id = request.params.id;
+    Item.findByIdAndRemove(id, function(err, item) {
+        if (err) {
+            console.log('Error deleting item:', err);
+            response.sendStatus(500);
+        } else {
+            response.sendStatus(200);
+        }
+    });
 });
 
 module.exports = router;

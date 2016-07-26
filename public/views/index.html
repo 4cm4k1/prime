@@ -24,8 +24,15 @@
 
         <ul class="list-group">
           <li ng-repeat="item in list.items" class="list-group-item">
-            {{item.name}} <span class="text-muted">Qty: {{item.qty}}</span>
-            <button type="button" class="btn btn-info" ng-click="list.editItem(item._id)">Edit</button>
+            <span ng-hide="item.show">
+              {{item.name}} <span class="text-muted">Qty: {{item.qty}}</span>
+            </span>
+            <span ng-show="item.show" class="form-group form-inline">
+              <input type="text" ng-model="item.name" class="form-control" placeholder="Bananas (example)"/>
+              <input type="number" placeholder="Qty" ng-model="item.qty" class="form-control"/>
+            </span>
+            <button type="button" class="btn btn-info" ng-click="list.editItem(item)" ng-hide="item.show">Edit</button>
+            <button type="button" class="btn btn-success" ng-show="item.show" ng-click="list.saveItem(item)">Save</button>
             <button type="button" class="btn btn-danger" ng-click="list.deleteItem(item._id)">Delete</button>
           </li>
         </ul>

@@ -23,9 +23,13 @@
         };
 
         //  called when user clicks 'edit' on existing item
-        vm.editItem = function(id){
-
+        vm.editItem = function(item){
+          item.show = !item.show;
         };
+
+        vm.saveItem = function(item){
+          updateItem(item);
+        }
 
         //  called when user clicks 'delete' on existing item
         vm.deleteItem = function(id){
@@ -50,6 +54,15 @@
           console.log('Successful post:', response);
           getItems();
           vm.newItem = {};
+        }
+
+        function updateItem(item){
+          $http.put('/list/' + item._id, item).then(handleUpdateItemSuccess, handleFailure);
+        }
+
+        function handleUpdateItemSuccess(response){
+          console.log('Successful put:', response);
+          getItems();
         }
 
         function deleteItem(id){
