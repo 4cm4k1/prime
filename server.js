@@ -19,18 +19,18 @@ app.use('/list', list);
 //  database
 var db = mongoose.connect('mongodb://localhost/groceryListApp').connection;
 
-db.on('error', function(err){
-  console.log('MongoDB connection error:', err);
+db.on('error', function(err) {
+    console.log('MongoDB connection error:', err);
 });
 
-db.once('open', function(){
-  console.log('Connected to MongoDB');
+db.once('open', function() {
+    console.log('Connected to MongoDB');
 });
 
 //  server
 var server = app.listen(process.env.PORT || 3000, startServer);
 
-function startServer(){
-  var port = server.address().port;
-  console.log('Listening on port', port, 'Ctrl-C to kill server');
+function startServer() {
+    var port = server.address().port;
+    console.log('Listening on port', port, 'Ctrl-C to kill server');
 }

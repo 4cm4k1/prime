@@ -3,7 +3,7 @@ var router = require('express').Router();
 //  Item model
 var Item = require('../models/items');
 
-//  get
+//  get (optional id parameter)
 router.get('/:id?', function(request, response) {
     var id = request.params.id;
 
@@ -33,7 +33,6 @@ router.get('/:id?', function(request, response) {
 //  post
 router.post('/', function(request, response) {
     //  Grab data from request
-    console.log(request.body);
     var data = request.body;
 
     //  Create a newItem instance from that data
@@ -54,8 +53,11 @@ router.post('/', function(request, response) {
 
 //  put
 router.put('/:id', function(request, response) {
+    //  Grab id and data from request
     var id = request.params.id;
     var data = request.body;
+
+    //  Find entry in Mongo and update it
     Item.findByIdAndUpdate(id, data, function(err, item) {
         if (err) {
             console.log('Error updating item:', err);
@@ -68,7 +70,10 @@ router.put('/:id', function(request, response) {
 
 //  delete
 router.delete('/:id', function(request, response) {
+    //  Grab id from request
     var id = request.params.id;
+
+    //  Find entry in Mongo and delete it
     Item.findByIdAndRemove(id, function(err, item) {
         if (err) {
             console.log('Error deleting item:', err);

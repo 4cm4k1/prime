@@ -1,3 +1,4 @@
+//  trying to implement John Papa's Angular Style Guide
 (function() {
     'use strict';
     angular.module('groceryListApp')
@@ -18,65 +19,65 @@
         getItems();
 
         //  called when user clicks '+' button for a new item
-        vm.submitNewItem = function(){
-          postItem();
+        vm.submitNewItem = function() {
+            postItem();
         };
 
         //  called when user clicks 'edit' on existing item
-        vm.editItem = function(item){
-          item.show = !item.show;
+        vm.editItem = function(item) {
+            item.show = !item.show;
         };
 
         //  called when user clicks 'save' after editing item
-        vm.saveItem = function(item){
-          updateItem(item);
+        vm.saveItem = function(item) {
+            updateItem(item);
         }
 
         //  called when user clicks 'delete' on existing item
-        vm.deleteItem = function(id){
-          deleteItem(id);
+        vm.deleteItem = function(id) {
+            deleteItem(id);
         };
 
-        function getItems(){
-          $http.get('/list').then(handleGetItemsSuccess, handleFailure);
+        function getItems() {
+            $http.get('/list').then(handleGetItemsSuccess, handleFailure);
         }
 
-        function handleGetItemsSuccess(response){
-          console.log('Successful get:', response);
-          vm.items = response.data;
-          return vm.items;
+        function handleGetItemsSuccess(response) {
+            console.log('Successful get:', response);
+            vm.items = response.data;
+            return vm.items;
         }
 
-        function postItem(){
-          $http.post('/list', vm.newItem).then(handlePostItemSuccess, handleFailure);
+        function postItem() {
+            $http.post('/list', vm.newItem).then(handlePostItemSuccess, handleFailure);
         }
 
-        function handlePostItemSuccess(response){
-          console.log('Successful post:', response);
-          getItems();
-          vm.newItem = {};
+        function handlePostItemSuccess(response) {
+            console.log('Successful post:', response);
+            getItems();
+            vm.newItem = {};
         }
 
-        function updateItem(item){
-          $http.put('/list/' + item._id, item).then(handleUpdateItemSuccess, handleFailure);
+        function updateItem(item) {
+            $http.put('/list/' + item._id, item).then(handleUpdateItemSuccess, handleFailure);
         }
 
-        function handleUpdateItemSuccess(response){
-          console.log('Successful put:', response);
-          getItems();
+        function handleUpdateItemSuccess(response) {
+            console.log('Successful put:', response);
+            getItems();
         }
 
-        function deleteItem(id){
-          $http.delete('/list/' + id).then(handleDeleteItemSuccess, handleFailure);
+        function deleteItem(id) {
+            $http.delete('/list/' + id).then(handleDeleteItemSuccess, handleFailure);
         }
 
-        function handleDeleteItemSuccess(response){
-          console.log('Successful delete:', response);
-          getItems();
+        function handleDeleteItemSuccess(response) {
+            console.log('Successful delete:', response);
+            getItems();
         }
 
-        function handleFailure(response){
-          console.log('Request failed, the server responded:', response);
+        function handleFailure(response) {
+            console.log('Request failed, the server responded:', response);
         }
     }
 })();
