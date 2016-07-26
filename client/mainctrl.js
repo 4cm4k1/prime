@@ -19,7 +19,7 @@
 
         //  called when user clicks '+' button for a new item
         vm.submitNewItem = function(){
-
+          postItem();
         };
 
         //  called when user clicks 'edit' on existing item
@@ -37,8 +37,19 @@
         }
 
         function handleGetItemsSuccess(response){
+          console.log('Successful get:', response);
           vm.items = response.data;
           return vm.items;
+        }
+
+        function postItem(){
+          $http.post('/list', vm.newItem).then(handlePostItemSuccess, handleFailure);
+        }
+
+        function handlePostItemSuccess(response){
+          console.log('Successful post:', response);
+          getItems();
+          vm.newItem = {};
         }
 
         function handleFailure(response){

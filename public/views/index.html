@@ -21,8 +21,7 @@
             <button type="button" name="submitNewItem" id="submitNewItem" class="btn btn-primary" ng-click="list.submitNewItem()">+</button>
           </div>
         </form>
-      </section>
-      <section>
+
         <ul class="list-group">
           <li ng-repeat="item in list.items" class="list-group-item">
             {{item.name}} <span class="text-muted">Qty: {{item.qty}}</span>

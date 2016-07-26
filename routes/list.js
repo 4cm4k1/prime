@@ -33,6 +33,7 @@ router.get('/:id?', function(request, response) {
 //  post
 router.post('/', function(request, response) {
     //  Grab data from request
+    console.log(request.body);
     var data = request.body;
 
     //  Create a newItem instance from that data
