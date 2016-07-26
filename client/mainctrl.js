@@ -29,7 +29,7 @@
 
         //  called when user clicks 'delete' on existing item
         vm.deleteItem = function(id){
-
+          deleteItem(id);
         };
 
         function getItems(){
@@ -50,6 +50,15 @@
           console.log('Successful post:', response);
           getItems();
           vm.newItem = {};
+        }
+
+        function deleteItem(id){
+          $http.delete('/list/' + id).then(handleDeleteItemSuccess, handleFailure);
+        }
+
+        function handleDeleteItemSuccess(response){
+          console.log('Successful delete:', response);
+          getItems();
         }
 
         function handleFailure(response){

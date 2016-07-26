@@ -55,5 +55,16 @@ router.post('/', function(request, response) {
 //  put
 
 //  delete
+router.delete('/:id', function(request, response){
+  var id = request.params.id;
+  Item.findByIdAndRemove(id, function(err, item){
+    if (err) {
+        console.log('Error deleting item:', err);
+        response.sendStatus(500);
+    } else {
+        response.sendStatus(200);
+    }
+  });
+});
 
 module.exports = router;
