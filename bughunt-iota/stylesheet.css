@@ -1,0 +1,41 @@
+/* 	ANTHONY MAKI 2016-02-01 */ 
+/*	Sets whole document background
+	to 'TKAM' picture */
+html {
+	background: #efefef url('http://i.onionstatic.com/avclub/5461/56/16x9/960.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/*	Sets body to inherit document
+	background, and initially hides 
+	all content for jQuery fadeIn() */
+body {
+	background: inherit;
+	display: none;
+}
+
+/* 	Gives header transparent gray
+	background with rounded corners */
+header {
+	padding: 20px;
+	margin: 20px auto;
+	display: table;
+	background-color:rgba(25,25,25,0.5);
+	border-radius: 20px;
+}
+/*	Formats h1 and decorates it with
+	text shadow! */
+h1 {
+	text-align: center;
+	color: #fefefe;
+	text-shadow: 1px 1px #333;
+}
+/*	Adjusts positioning relative to
+	neighboring element on the DOM,
+	sets font size */
+ul {
+	margin: 20% auto;
+	font-size: 24px;
+}

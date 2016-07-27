@@ -1,0 +1,30 @@
+{
+  "name": "prime_weekend_04_todo",
+  "version": "1.0.0",
+  "description": "A simple full-stack to-do list application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/prime_weekend_04_todo.git"
+  },
+  "author": "Anthony Maki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/prime_weekend_04_todo/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/prime_weekend_04_todo#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jquery": "^2.2.0",
+    "material-design-icons": "^2.2.0",
+    "normalize.css": "^3.0.3",
+    "path": "^0.12.7",
+    "pg": "^4.4.6",
+    "snackbarjs": "^1.0.0"
+  }
+}

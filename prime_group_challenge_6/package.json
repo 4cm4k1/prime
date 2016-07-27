@@ -1,0 +1,27 @@
+{
+  "name": "prime_group_challenge_6",
+  "version": "1.0.0",
+  "description": "Patronus assigner using Angular, Express, and PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/prime_group_challenge_6.git"
+  },
+  "author": "Richard Camara, Megan Martinson, Anthony Maki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/prime_group_challenge_6/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/prime_group_challenge_6#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.6",
+    "express": "^4.14.0",
+    "pg": "^6.0.3"
+  }
+}

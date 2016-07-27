@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mongo!</title>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+</head>
+<body ng-app="myApp">
+    <div ng-controller="IndexController">
+        <h1>Iota Mongo!</h1>
+        <div class="row">
+            <div class="col-md-6">
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" ng-model="name" id="name" />
+                <label for="location">Location: </label>
+                <input type="text" ng-model="location" id="location" />
+                <button class="btn btn-info" ng-click="addPerson()">Add Person</button>
+            </form>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-repeat="person in people" class="well col-md-3">
+                <p>{{person.name}}</p>
+                <p>{{person.location}}</p>
+                <button ng-click="update(person._id)" class="btn btn-default">Update</button>
+                <button ng-click="delete(person._id)" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "personArray": [
+    {
+      "name": "Kris Szafranski",
+      "favoriteMovie1": "The Goonies",
+      "favoriteMovie2": "The Incredibles",
+      "favoriteSong": "Rez/Cowgirl Live by Underworld",
+      "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANLAAAAJGVmOTljZDA5LTk0NWUtNDlmOC1hNzg0LWViOWU4NjZjMTc3Ng.jpg"
+    },
+    {
+      "name": "Ryan Mulcahy",
+      "favoriteMovie1": "Blade Runner",
+      "favoriteMovie2": "Inside Out",
+      "favoriteSong": "No Children - The Mountain Goats",
+      "imageURL": "https://avatars0.githubusercontent.com/u/5800836?v=3&s=460"
+    },
+    {
+      "name": "Luis de la Espriella",
+      "favoriteMovie1": "Catch Me If You Can",
+      "favoriteMovie2": "Emperor's New Groove",
+      "favoriteSong": "...And Justice For All",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAVZAAAAJDc3YzIwZTNhLWYxYTctNGE2Ny05NjVjLWVhY2Q4MGVlOTU0Mg.jpg"
+    },
+    {
+      "name": "Saviohieu Nguyen",
+      "favoriteMovie1": "Godfather",
+      "favoriteMovie2": "Empire Strikes Back",
+      "favoriteSong": "Them Changes by Thundercat feat Flying Lotus & Kamasi Washington",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAPpAAAAJGMxZjZhYTgwLTgyNmUtNGU0MS1iZmFhLWY2YTczNTZhNjM3Nw.jpg"
+    },
+    {
+      "name": "Bennett Batzli",
+      "favoriteMovie1": "Bill & Ted's Excellent Adventure",
+      "favoriteMovie2": "High Fidelity",
+      "favoriteSong": "Source - Fever the Ghost",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAATuAAAAJDRhMWUyZGViLWJkZjItNDgwZS1hZmY1LTNhYTFhODEwOTljMw.jpg"
+    },
+    {
+      "name": "Anthony Maki",
+      "favoriteMovie1": "The Revenant",
+      "favoriteMovie2": "Interstellar",
+      "favoriteSong": "Lazarus",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAXRAAAAJGJjNGJhNTMyLWIwYzItNGQ0Mi1hMzFmLWVhMTExOTFjM2YyNQ.jpg"
+    },
+    {
+      "name": "John Rachuy",
+      "favoriteMovie1": "Stripes",
+      "favoriteMovie2": "The Game",
+      "favoriteSong": "Zac Brown Band - Beautiful Drug",
+      "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAV2AAAAJDViZjg5YTEzLTkxMzAtNDM3Ni1iYzg4LTU2MTYxZmQ4ZjJiYg.jpg"
+    },
+    {
+      "name": "Kailey Colestock",
+      "favoriteMovie1": "Howl's Moving Castle",
+      "favoriteMovie2": "How to Train Your Dragon",
+      "favoriteSong": "Mad World",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAb7AAAAJDMxOTFmODlmLThiYjMtNGEzOC05NDBmLWI0OTE2YTlmMTM2ZA.jpg"
+    },
+    {
+      "name": "Caitlin Collins",
+      "favoriteMovie1": "Mulan",
+      "favoriteMovie2": "Homeward Bound",
+      "favoriteSong": "Love Yourself",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAYAAAAAJGM5YTBkNGMxLTQzMDctNGE0Mi1iYzg0LTc4YzRiNDJjM2U2NA.jpg"
+    },
+    {
+      "name": "Moni Francesca",
+      "favoriteMovie1": "Apocalypse Now",
+      "favoriteMovie2": "Do The Right Thing",
+      "favoriteSong": "Hotline Bling",
+      "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/186/388/2e58d0f.jpg"
+    },
+    {
+      "name": "Alex Minge",
+      "favoriteMovie1": "The Matrix",
+      "favoriteMovie2": "Kill Bill Volume 1",
+      "favoriteSong": "Under the Bridge",
+      "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/000/1e1/0f6/3229539.jpg"
+    },
+    {
+      "name": "Gwen Williams",
+      "favoriteMovie1": "Guardians of the Galaxy",
+      "favoriteMovie2": "My Neighbor Totoro",
+      "favoriteSong": "Mr. Blue Sky",
+      "imageURL": "https://avatars3.githubusercontent.com/u/5042496?v=3&s=460"
+    },
+    {
+      "name": "Remy Allen",
+      "favoriteMovie1": "Back to the Future",
+      "favoriteMovie2": "Scott Pilgrim vs. the World",
+      "favoriteSong": "I and Love and You",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAcDAAAAJDMzODFmODk0LWI3NDktNGU3Yy05YzE3LTIzOGNhZjZiNDhiNA.jpg"
+    },
+    {
+      "name": "Annette Tousley",
+      "favoriteMovie1": "Almost Famous",
+      "favoriteMovie2": "Pride and Prejudice",
+      "favoriteSong": "Brandi Carlile, Murder in the City",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAW7AAAAJDRkODAzNzI1LTBmOGUtNGFhNC1hMGZhLTM5Yzk5OTM2MDZiZg.jpg"
+    },
+    {
+      "name": "Andy Fehrenbach",
+      "favoriteMovie1": "Once",
+      "favoriteMovie2": "Little Miss Sunshine",
+      "favoriteSong": "This Boy is Exhausted by The Wrens",
+      "imageURL": "https://avatars1.githubusercontent.com/u/13650579?v=3&s=460"
+    },
+    {
+      "name": "Juan Ball",
+      "favoriteMovie1": "Dumb and dumber",
+      "favoriteMovie2": "The Dark Night",
+      "favoriteSong": "Facts - By Kanye West",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAATIAAAAJDEzNjUwYTk4LWY1ZDYtNDIyNy05NTQxLTAyMmE0NWVkZTRlNw.jpg"
+    },
+    {
+      "name": "Kat Traxler",
+      "favoriteMovie1": "Natural Born Killers",
+      "favoriteMovie2": "All the Presidents Men",
+      "favoriteSong": "Whiter Shade of Pale",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAQjAAAAJDMxNjY4NTkyLWQ2ODYtNGQxYi04MzNkLTQ1MGJiOTY2NmNlZA.jpg"
+    },
+    {
+      "name": "Joshua Sternberg",
+      "favoriteMovie1": "GalaxyQuest",
+      "favoriteMovie2": "Lord of the Rings trilogy",
+      "favoriteSong": "Keep Your Eyes Open by Needtobreathe",
+      "imageURL": "https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/1292813_10200603925926536_1413481694_o.jpg"
+    },
+    {
+      "name": "Kati Lueth",
+      "favoriteMovie1": "Before Sunrise",
+      "favoriteMovie2": "Mission Impossible",
+      "favoriteSong": "Hey Mami, Sylvan Esso",
+      "imageURL": "https://media.licdn.com/media/AAEAAQAAAAAAAAXxAAAAJGIyYTkyODE3LWY5ZDctNGY4My04NmQ1LTM0MDY4OGFkNDkzZg.jpg"
+    },
+    {
+      "name": "Chris Gibson",
+      "favoriteMovie1": "Silence of the Lambs",
+      "favoriteMovie2": "Field of Dreams",
+      "favoriteSong": "Hallelujah",
+      "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMbAAAAJDUzNTljYmVjLTVjZDQtNGUxZS04MjE4LTJiMzU3MGNhNDUxZA.jpg"
+    }
+  ]
+}

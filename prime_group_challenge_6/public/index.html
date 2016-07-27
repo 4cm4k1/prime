@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="patronusapp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Expecto Patronus</title>
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css" charset="utf-8" />
+    <link rel="stylesheet" href="style.css" charset="utf-8" />
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+</head>
+
+<body ng-controller="patronuscontroller" class="container">
+    <header class="page-header text-center">
+        <h1>Expecto <em>PATRONUS</em> <small>Patronus Assigner using Angular, Express, and PostgreSQL</small></h1>
+    </header>
+<main class="row">
+  <section class="col-md-6 col-xs-6">
+    <div class="form-inline">
+        <input class="form-control input-lg" type="text" name="person_name" ng-model="personText" placeholder="Input person name" />
+        <button class="btn btn-lg btn-primary" ng-click="personSubmit()">Submit Person</button>
+        <ul class="list-group text-primary">
+            <li class="list-group-item" ng-repeat="people in peopleList">{{people.first_name}} {{people.last_name}}</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="col-md-6 col-xs-6">
+    <div class="form-inline">
+        <input class="form-control input-lg" type="text" name="patronus_name" ng-model="patronusText" placeholder="Input patronus here">
+        <button class="btn btn-lg btn-warning" ng-click="patronusSubmit()">Submit Patronus</button>
+        <ul class="list-group text-warning">
+            <li class="list-group-item" ng-repeat="patronus in patronusList">{{patronus.patronus_name}}</li>
+        </ul>
+    </div>
+  </section>
+</main>
+
+
+</body>
+
+</html>

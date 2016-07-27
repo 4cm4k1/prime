@@ -1,0 +1,55 @@
+body {
+  background-color: #fafafa;
+  font-size: 42px;
+}
+
+header, main, footer {
+  font-family: 'Slabo 27px', serif;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+form > input {
+  font-family: 'Slabo 27px', serif;
+  font-size: 36px;
+  width: 400px;
+  padding: 20px;
+}
+
+.task {
+  padding: 20px;
+}
+
+.task > i, .task > p, .task > button {
+  display: inline;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+button > i {
+  vertical-align: middle;
+}
+
+.material-icons {
+  color: rgba(40, 40, 40, 1);
+}
+
+.material-icons:hover {
+  color: rgba(198, 54, 46, 1);
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  margin: 20px;
+  background-color: rgba(244,0,0,1);
+}
+
+button:hover {
+  background-color: rgba(40,40,40,1);
+}

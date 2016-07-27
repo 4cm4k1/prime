@@ -1,0 +1,111 @@
+/* PAGE-WIDE DEFAULTS (after normalize.css) */
+/* BODY */
+body {
+  font-family: 'industry', sans-serif;
+  font-size: 18px;
+  background: #fff;
+  color: #333;
+}
+/* HIDE <MAIN> UNTIL BUTTON */
+main, footer {
+  display: none;
+}
+/* BUTTON STYLING */
+button {
+  border-radius: 10%;
+  background-color: #0e5c0a;
+  border: 1px 1px 1px 1px solid #fff;
+}
+/* HEADINGS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'factoria', serif;
+}
+h1 {
+  font-size: 64px;
+  text-shadow: 1px 2px #0e5c0a;
+  margin-bottom: 18px;
+  color: #fff;
+}
+h2 {
+  margin: -76px 0 0 0;
+  text-shadow: 1px 2px #0e5c0a;
+  color: #fff;
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+/* LINKS */
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+header a,
+header a:visited,
+header a:active,
+header a:hover {
+  color: #fff;
+}
+/* PAGE LAYOUT & SPECIFIC TWEAKS */
+/* HEADER */
+header {
+  padding: 40px 20% 0 20%;
+  max-width: 100%;
+  background: #efefef url("photo.jpg") no-repeat center;
+  height: 600px;
+  color: #fff;
+}
+header ul {
+  padding-left: 0;
+}
+header li {
+  display: block;
+  font-size: 22px;
+  text-shadow: 1px 2px #0e5c0a;
+  margin-bottom: 12px;
+}
+header li:last-child {
+  margin-top: 48px;
+  margin-bottom: 0;
+  font-size: 32px;
+  line-height: 36px;
+}
+.bio {
+  width: 600px;
+  font-style: italic;
+}
+/* MAIN */
+main {
+  padding: 40px 20% 0 20%;
+}
+main p {
+  display: block;
+  float: right;
+  font-weight: bold;
+  background: #f8f8f8;
+  padding: 2px 6px 0 6px;
+  box-shadow: inset 1px 1px 1px #ccc;
+}
+main li {
+  line-height: 28px;
+}
+/* FOOTER */
+footer {
+  margin: 36px 0 18px 0;
+  width: 100%;
+  text-align: center;
+}

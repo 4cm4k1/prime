@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="groceryListApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prime Assessment 3: Full-Stack Application (MEAN)</title>
+    <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" charset="utf-8" />
+    <link rel="stylesheet" href="assets/styles/style.css" charset="utf-8" />
+    <script src="assets/vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="assets/scripts/client.min.js" charset="utf-8"></script>
+</head>
+
+<body ng-controller="MainCtrl as list" class="container">
+    <header class="page-header">
+        <h1>Prime Assessment 3 <small>Full-Stack App (MEAN)</small></h1>
+    </header>
+    <main class="row">
+        <section class="col-md-8 col-md-offset-2">
+            <h2>Grocery Items</h2>
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" name="newItemName" id="newItemName" ng-model="list.newItem.name" class="form-control input-lg" placeholder="Bananas (example)" />
+                    <input type="number" name="newItemQty" id="newItemQty" placeholder="Qty" ng-model="list.newItem.qty" class="form-control input-lg" />
+                    <button type="button" name="submitNewItem" id="submitNewItem" class="btn btn-lg btn-primary" ng-click="list.submitNewItem()">+</button>
+                </div>
+            </form>
+
+            <ul class="list-group">
+                <li ng-repeat="item in list.items" class="list-group-item">
+                    <h4>
+                      <span ng-hide="item.show">
+                        {{item.name}} <span class="label label-default">Qty: {{item.qty}}</span>
+                      </span>
+                      <span ng-show="item.show" class="form-group form-inline">
+                        <input type="text" ng-model="item.name" class="form-control input-lg" placeholder="Bananas (example)"/>
+                        <input type="number" placeholder="Qty" ng-model="item.qty" class="form-control input-lg"/>
+                      </span>
+                      <button type="button" class="btn btn-lg btn-info" ng-click="list.editItem(item)" ng-hide="item.show">Edit</button>
+                      <button type="button" class="btn btn-lg btn-success" ng-show="item.show" ng-click="list.saveItem(item)">Save</button>
+                      <button type="button" class="btn btn-lg btn-danger" ng-click="list.deleteItem(item._id)">Delete</button>
+                    </h4>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

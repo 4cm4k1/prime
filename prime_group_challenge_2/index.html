@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Group jQuery Challenge 1</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body class="container">
+    <header class="page-header">
+      <h1>Group jQuery Challenge 1 <small>Used Car Tracker</small></h1>
+    </header>
+    <main>
+      <section class="row">
+        <div class="col-md-6">
+          <form id="carForm">
+            <div class="form-group">
+              <label for="make">Make</label>
+              <input type="text" name="make" class="form-control" id="make" placeholder="Enter vehicle make" />
+            </div>
+            <div class="form-group">
+              <label for="model">Model</label>
+              <input type="text" name="model" class="form-control" id="model" placeholder="Enter vehicle model" />
+            </div>
+            <div class="form-group">
+              <label for="year">Year</label>
+              <input type="number" name="year" class="form-control" id="year" placeholder="Enter vehicle year" />
+            </div>
+            <div class="form-group">
+              <label for="carColor">Color</label>
+              <input type="text" name="color" class="form-control" id="carColor" placeholder="Enter vehicle color" />
+            </div>
+            <div class="form-group">
+              <label for="customerRating">Customer Rating</label>
+              <input type="text" name="customerRating" class="form-control" id="customerRating" placeholder="Enter customer rating"/>
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="number" name="price" class="form-control" id="price" placeholder="Enter vehicle price"/>
+            </div>
+              <input type= "submit" class="btn btn-primary" />
+          </form>
+          <button class="btn btn-success" id="randomCar">You get a new car!!!!11 (Random)</button>
+        </div>
+        <div class="col-md-6" id="vehicleOutput">
+          <!-- List of Cars -->
+          <!-- refreshDOM function will append here -->
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.movie {
+  height: 32em;
+  width: 24em;
+  color: #fff;
+  text-shadow: 1px 1px 4px #111;
+  display: inline-block;
+  border-radius: 1em;
+  margin: 1em 1em 0 0;
+  padding: 1em;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Prime Node/Express &amp; SQL Assessment</title>
+  <meta name="description" content="Using the full stack to manage zoo animal inventory" />
+  <meta name="author" content="Anthony Maki" />
+
+  <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="/vendors/jquery.min.js"></script>
+  <script src="/scripts/client.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="jumbotron">
+      <h1>Node/Express &amp; SQL Assessment</h1>
+      <p>
+        Using the full stack to manage zoo animal inventory
+      </p>
+    </header>
+
+    <main class="row">
+
+      <section class="animal-form col-md-6">
+        <form id="animal-form" class="form-inline">
+          <h2>Add an animal to the Zoo!</h2>
+          <label for="animal-type">Type of Animal: </label>
+          <input type="text" id="animal-type" name="animal-type" placeholder="e.g. Zebra" class="form-control" />
+          <input type="submit" value="Add animal" class="btn btn-primary" />
+        </form>
+      </section>
+
+      <section class="animal-inventory col-md-6">
+        <h2>Animal Inventory</h2>
+        <div id="animal-inventory">
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        Here is <a href="/assets/database.txt">the SQL statement</a> used for table creation.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

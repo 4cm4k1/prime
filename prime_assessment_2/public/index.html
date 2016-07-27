@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="primeAssessment2">
+  <head>
+    <meta charset="utf-8">
+    <title>Prime Assessment 2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css" charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MainCtrl" class="container">
+    <header class="page-header">
+      <h1>Prime Assessment 2 <small>Angular and Express</small></h1>
+    </header>
+    <main class="row">
+      <section class="col-md-6 col-xs-6">
+        <h2>
+          Xi Class List
+          <button class="btn btn-primary btn-lg" type="button" name="button" ng-click="getStudents()">Display Students</button>
+        </h2>
+      </section>
+      <!-- Where the students will be listed after the button is clicked
+      and the $http request returns -->
+      <section class="col-md-6 col-xs-6">
+        <div class="list-group">
+          <a class="list-group-item" ng-repeat="student in students">
+            {{student.name}}
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

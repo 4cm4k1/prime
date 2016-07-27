@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Fruit Stand</title>
+	<link rel="stylesheet" href="bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+	<link href="stylesheet.css" rel="stylesheet">
+
+	<script src="jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body class="container">
+	<header class="page-header">
+		<h1>Prime Group Challenge 3 <small>Fruit Stand</small></h1>
+	</header>
+	<main>
+		<div class="row" id="fruitStand">
+
+			<section class="fruitPanel col-md-3" id="apple">
+				<h2 class="emoji">&#x1f34e;</h2>
+				<ul class="list-group">
+					<li class="list-group-item prices">
+						<span class="badge">Current Price</span>
+						<span class="currentPrice" id="applePrice"></span>
+					</li>
+
+					<li class="list-group-item prices">
+						<span class="badge">Avg Purchase Price</span>
+						<span class="avgPrice" id="averageApplePrice"></span>
+					</li>
+				</ul>
+
+			</section>
+
+			<section class="fruitPanel col-md-3" id="orange">
+				<h2 class="emoji">&#x1f34a;</h2>
+				<ul class="list-group">
+					<li class="list-group-item prices">
+						<span class="badge">Current Price</span>
+						<span class="currentPrice" id="orangePrice"></span>
+					</li>
+
+					<li class="list-group-item prices">
+						<span class="badge">Avg Purchase Price</span>
+						<span class="avgPrice" id="averageOrangePrice"></span>
+					</li>
+				</ul>
+
+			</section>
+
+			<section class="fruitPanel col-md-3" id="banana">
+				<h2 class="emoji">&#x1f34c;</h2>
+				<ul class="list-group">
+					<li class="list-group-item prices">
+						<span class="badge">Current Price</span>
+						<span class="currentPrice" id="bananaPrice"></span>
+					</li>
+
+					<li class="list-group-item prices">
+						<span class="badge">Avg Purchase Price</span>
+						<span class="avgPrice" id="averageBananaPrice"></span>
+					</li>
+				</ul>
+
+			</section>
+
+			<section class="fruitPanel col-md-3" id="grape">
+				<h2 class="emoji">&#x1f347;</h2>
+				<ul class="list-group">
+					<li class="list-group-item prices">
+						<span class="badge">Current Price</span>
+						<span class="currentPrice" id="grapePrice"></span>
+					</li>
+
+					<li class="list-group-item prices">
+						<span class="badge">Avg Purchase Price</span>
+						<span class="avgPrice" id="averageGrapePrice"></span>
+					</li>
+				</ul>
+
+			</section>
+		</div>
+
+
+		<div class="row">
+
+			<section class="col-md-6">
+
+				<h2>Account Balance</h2>
+				<h3 class="emoji">&#x1f4b0; <small><span id="accountBalance"></span></small></h3>
+
+			</section>
+
+			<section class="col-md-6">
+				<h2>Inventory Balance</h2>
+				<div id="inventoryBalance">
+					<ul class="list-group">
+						<li class="list-group-item inventory" id="sellApple">
+							<span class="badge inventory" id="appleInventory"></span>
+							&#x1f34e;
+							<button class="btn btn-lg btn-success">Sell!</button>
+
+						</li>
+						<li class="list-group-item inventory" id="sellOrange">
+							<span class="badge inventory" id="orangeInventory"></span>
+							&#x1f34a;
+							<button class="btn btn-lg btn-success">Sell!</button>
+						</li>
+						<li class="list-group-item inventory" id="sellBanana">
+							<span class="badge inventory" id="bananaInventory"></span>
+							&#x1f34c;
+							<button class="btn btn-lg btn-success">Sell!</button>
+						</li>
+						<li class="list-group-item inventory" id="sellGrape">
+							<span class="badge inventory" id="grapeInventory"></span>
+							&#x1f347;
+							<button class="btn btn-lg btn-success">Sell!</button>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</main>
+
+
+
+</body>
+
+</html>

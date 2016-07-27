@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Superhero Tracker</title>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/enterController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/removeController.js"></script>
+</head>
+<body class="container">
+    <header ng-include="'/templates/header.html'" class="jumbotron"></header>
+    <nav ng-include="'/templates/nav.html'"></nav>
+    <main ng-view></main>
+</body>
+</html>

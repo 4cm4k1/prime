@@ -1,0 +1,23 @@
+.fruitPanel {
+  text-align: center;
+}
+
+.emoji {
+  font-size: 120px;
+}
+
+.prices {
+  text-align: left;
+}
+
+.currentPrice {
+  font-size: 48px;
+}
+
+.avgPrice {
+  font-size: 24px;
+}
+
+.inventory {
+  font-size: 48px;
+}

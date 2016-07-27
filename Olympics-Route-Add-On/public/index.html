@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="angularOlympics">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular Olympics</title>
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css" charset="utf-8" />
+    <link rel="stylesheet" href="style.css" charset="utf-8" />
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="./vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+    <base href="/" />
+</head>
+
+<body class="container">
+    <header class="page-header">
+        <h1>Angular Olympics <small>Using $http requests in Angular and Express routes</small></h1>
+    </header>
+
+    <main class="">
+        <section class="">
+            <a class="btn btn-lg btn-primary" href="/archery">Archery</a>
+            <a class="btn btn-lg btn-primary" href="/canoe-kayak">Canoe/Kayak</a>
+            <a class="btn btn-lg btn-primary" href="/modern-pentathlon">Modern Pentathlon</a>
+            <a class="btn btn-lg btn-primary" href="/soccer">Soccer</a>
+            <a class="btn btn-lg btn-primary" href="/taekwondo">Taekwondo</a>
+        </section>
+
+        <section ng-view class="">
+        </section>
+    </main>
+</body>
+
+</html>

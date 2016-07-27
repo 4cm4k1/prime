@@ -1,0 +1,29 @@
+{
+  "name": "mean-guide",
+  "version": "1.0.0",
+  "description": "My first MEAN application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/MEAN-guide.git"
+  },
+  "author": "Anthony Maki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/MEAN-guide/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/MEAN-guide#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "mongoose": "^4.5.6"
+  }
+}

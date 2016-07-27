@@ -1,0 +1,36 @@
+{
+  "name": "passport-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cm4k1/prime_solo_challenge_passport.git"
+  },
+  "author": "Anthony Maki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cm4k1/prime_solo_challenge_passport/issues"
+  },
+  "homepage": "https://github.com/4cm4k1/prime_solo_challenge_passport#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "mongoose": "^4.5.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

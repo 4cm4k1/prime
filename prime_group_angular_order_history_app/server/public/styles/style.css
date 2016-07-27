@@ -1,0 +1,17 @@
+body {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Invincible_Armada.jpg/1280px-Invincible_Armada.jpg') no-repeat center fixed;
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-size: cover;
+  font-family: 'Permanent Marker', sans-serif;
+}
+header, .jumbotron, main, footer {
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.customer-list article p, .customer-list article button, .customer-list article h2 {
+  display: inline;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Angular Armada's Angular Order History App.. ahoy!</title>
+  <meta name="description" content="First Angular group activity" />
+  <meta name="author" content="Anthony Maki, Josh Sternberg, and Luis De La Espriella" />
+  <script type="text/javascript" src="/vendors/angular.min.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/customerInfo.js"></script>
+  <script type="text/javascript" src="/scripts/orderInfo.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+
+</head>
+<body ng-app="myApp">
+  <div class="container">
+    <header class="jumbotron">
+      <h1>Angular Arrrrrmada's<br/>Angular Order History App</h1>
+      <p>...ahoy!</p>
+    </header>
+    <main>
+      <div class="row" ng-controller="CustomerController">
+        <section class="customer-list col-md-6">
+          <h2>Customer List</h2>
+
+          <article ng-repeat="person in customers | orderBy:'last_name'">
+            <h3>{{person.first_name}} {{person.last_name}}
+            <button class="btn btn-primary" ng-show="person.count > 0" ng-click="getOrders(person.id)">Show Orders ({{person.count}})</button>
+            <span class="label label-danger" ng-show="person.count == 0">No orders for this customer.</span></h3>
+
+          </article>
+
+        </section>
+
+        <section class="order-history col-md-6">
+          <h2>Order History</h2>
+
+            <article ng-repeat="order in orders">
+              <order-info info="order"></order-info>
+            </article>
+        </section>
+
+      </div>
+    </main>
+    <footer class="text-muted">
+      &copy; 2016 Angular Arrrrrrrrrrmadas!!!!111one
+    </footer>
+  </div>
+</body>
+</html>

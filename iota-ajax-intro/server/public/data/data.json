@@ -1,0 +1,22 @@
+{
+  "people" : [
+    {
+        "name"     : "Kris Szafranski",
+        "position" : "Instructor",
+        "location" : "Richfield",
+        "imageURL" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANLAAAAJGVmOTljZDA5LTk0NWUtNDlmOC1hNzg0LWViOWU4NjZjMTc3Ng.jpg"
+    },
+    {
+        "name": "Fred Sheahan",
+        "position": "Learning Environment Engineer",
+        "location": "Eden Prairie",
+        "imageURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAShAAAAJDQ1ZDkwZjdlLWU5MGYtNDQ5YS04OWU5LTRkODdkNzdlOTAyMw.jpg"
+    },
+    {
+        "name"     : "Mark Hurlburt",
+        "position" : "President",
+        "location" : "Minneapolis",
+        "imageURL" : "https://media.licdn.com/media/p/4/000/132/251/154d1e4.jpg"
+    }
+  ]
+}

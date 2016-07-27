@@ -1,0 +1,31 @@
+/* ANTHONY MAKI 2016-02-08 */
+/* BACKGROUND SETTINGS */
+body {
+    background: #efefef url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron {
+    background: inherit;
+}
+/* HEADINGS */
+.jumbotron h1 {
+    font-size: 72px;
+    color: #efefef;
+    text-shadow: 1px 1px #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2.list-group-item-heading {
+    font-size: 48px;
+}
+
+/* POSITIONING OF THE CAROUSEL ARROWS */
+#left-arrow button, #right-arrow button {
+    margin: 300px 0 300px 0;
+}
+/* INITIALIZATION - most body elements hidden until JS acts */
+.reveal {
+    display: none;
+}
