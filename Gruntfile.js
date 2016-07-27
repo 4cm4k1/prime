@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     jshint: {
-      files: ['Gruntfile.js', 'public/scripts/*.js', 'routes/*.js', 'models/*.js']
+      files: ['Gruntfile.js', 'public/scripts/*.js', 'routes/*.js', 'models/*.js', 'server.js']
     },
     watch: {
       files: ['**/*.js'],
@@ -34,6 +34,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['jshint', 'watch']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'watch']);
 
 };

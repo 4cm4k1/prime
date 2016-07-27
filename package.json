@@ -19,6 +19,7 @@
   "homepage": "https://github.com/4cm4k1/prime_solo_challenge_passport#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
